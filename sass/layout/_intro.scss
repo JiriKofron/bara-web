@@ -1,0 +1,14 @@
+.intro {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    background: linear-gradient(180deg, $primary-blue 75%, rgba(255,255,255,1) 100%);
+    color: white;
+
+    img {
+        width: 80%;
+        box-sizing: border-box;
+    }
+}

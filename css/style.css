@@ -42,6 +42,13 @@ body {
   font-weight: 300;
   line-height: 1.6rem; }
 
+.social-proof {
+  font-family: "Monserrat", serif;
+  font-size: 1.2rem; }
+  .social-proof__name {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem; }
+
 .page-container {
   width: 90vw;
   display: flex;
@@ -81,20 +88,30 @@ body {
     width: 4rem;
     padding-right: 1rem; }
 
-.social-proof {
+.container {
+  width: 100vw;
+  height: 40rem; }
+
+.main-carousel {
+  height: 25rem; }
+
+.carousel-cell {
+  /*border: 1px solid green;*/
+  width: 85%;
+  height: 25rem;
   display: flex;
-  justify-content: flex-start;
-  align-self: flex-start;
-  margin-bottom: 2rem; }
-  .social-proof__card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80vw;
-    margin: 0 1rem;
-    border: 1px solid red; }
-  .social-proof__text {
-    display: inline-block; }
+  flex-direction: column;
+  align-items: center; }
+  .carousel-cell img {
+    width: 40%;
+    /*border: 1px solid red;*/ }
+  .carousel-cell .review-name {
+    margin: 0;
+    margin-top: .5rem;
+    font-size: 3rem; }
+  .carousel-cell .review-text {
+    margin-top: 2rem;
+    margin-bottom: 1rem; }
 
 main {
   display: flex;

@@ -2,6 +2,7 @@
 <html lang="cs">
 <head>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/flickity.css">
   <link rel=”canonical” href=”https://psenicova.cz/” />
   <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400|Roboto:100,400,700&display=swap" rel="stylesheet">
@@ -15,6 +16,8 @@
   gtag('config', 'UA-148345268-1');
 </script>-->
 <script src="https://kit.fontawesome.com/264d3a40e4.js"></script>
+<script type="text/javascript" src="vendor/flickity.pkgd.min.js"></script>
+<script type="text/javascript" src="vendor/vue.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -44,35 +47,17 @@
     <section class="service-text">
       <p class="service-text__text">Konzultace v rámci psychoterapie považuji za společný prostor, v němž Vám pomohu dojít ke změně a úlevě prostřednictvím pochopení, nebo odstranění pocitů, které vám ztrpčují život. </p>
     </section>
-    <section class="social-proof">
-      <div class="social-proof__card">
-        <img src="https://img.icons8.com/pastel-glyph/2x/person-male.png" alt="card1">
-      <p class="social-proof__name">Alice</p>
-        <p class="social-proof__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate sollicitudin molestie. Duis sagittis magna ligula, quis pharetra mi efficitur nec. Aenean nec diam nec sem mollis pretium eu venenatis metus. Phasellus lacinia nunc tortor, quis auctor mauris egestas non. Cras et vestibulum sapien. </p>
+    <section class="container">
+      <div class="main-carousel" id="review-display">
+        <review-display
+     v-for="item in reviews"
+     v-bind:review="item"
+     v-bind:key="item.id">
+     </review-display>
       </div>
-      <div class="social-proof__card">
-        <img src="https://img.icons8.com/pastel-glyph/2x/person-male.png" alt="card2">
-        <p class="social-proof__name">Marchel</p>
-        <p class="social-proof__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate sollicitudin molestie. Duis sagittis magna ligula, quis pharetra mi efficitur nec. Aenean nec diam nec sem mollis pretium eu venenatis metus. Phasellus lacinia nunc tortor, quis auctor mauris egestas non. Cras et vestibulum sapien. </p>
-      </div>
-      <div class="social-proof__card">
-        <img src="https://img.icons8.com/pastel-glyph/2x/person-male.png" alt="card3">
-        <p class="social-proof__name">Philiph</p>
-        <p class="social-proof__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate sollicitudin molestie. Duis sagittis magna ligula, quis pharetra mi efficitur nec. Aenean nec diam nec sem mollis pretium eu venenatis metus. Phasellus lacinia nunc tortor, quis auctor mauris egestas non. Cras et vestibulum sapien. </p>
-      </div>
-      
     </section>
-    <button id="prev-btn">Previous</button>
-    <ul class="service-cards">
-      <li><span class="svg_icons"><img src="icons/confusion.svg" alt="ikona hlavy z profilu se znakem velkého otazníku"></span>Čeká Vás velká změna v životě a obáváte se jí?</li>
-      <li>Trápí Vás něco, s čím si nevíte rady?<span class="svg_icons"><img src="icons/puzzle.svg" alt="ikona hlavy z profilu se znakem puzzle kostiček"></span></li>
-      <li><span class="svg_icons"><img src="icons/bipolar.svg" alt="ikona hlavy z profilu se stvárněním tragikomedie"></span>Stojíte na životní křižovatce a nevíte, jak se rozhodnout?</li>
-      <li>Stojíte o to, aby se ve Vašem životě něco změnilo?<span class="svg_icons"><img src="icons/in-love.svg" alt="ikona hlavy z profilu se dvěma srdci"></span></li>
-      <li><span class="svg_icons"><img src="icons/observation.svg" alt="ikona hlavy z profilu se znakem hledání lupou"></span>Hledáte odpovědi na své otázky?</li>
-      <li>Jste unavení, postrádáte v životě smysl a chybí Vám energie?<span class="svg_icons"><img src="icons/depression.svg" alt="ikona hlavy z profilu se znakem bouřkového mraku a blesku"></span></li>
-      <li><span class="svg_icons"><img src="icons/exhausted.svg" alt="ikona hlavy z profilu se znakem vybité baterie"></span>Myslíte si, že zažíváte pocit vyhoření?</li>
-      <li>Máte osobní problémy, které neberou konce?<span class="svg_icons"><img src="icons/broken-heart.svg" alt="ikona hlavy z profilu se znakem zlomeného srdce"></span></li>     
-</ul>
+    <a href="services.html">Služby</a>
+    <button id="prev-btn">Služby</button>
   </div>
   </main>
 <script type="text/javascript" src="index.js"></script>

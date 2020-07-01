@@ -1,0 +1,5 @@
+Vrátit se u social proof k vue componentě, bude se to snadněji doplňovat
+Tlačítka?!
+Barevná paleta - vyzkoušet
+Menu v pravém horním rohu - sticky se skrolováním, využít efekt jako v scss tutoriálu - využít červenou, nebo lehce modrou barvu
+do social proof card vlnovku, nebo nějaké zpetření, ať to není celobarevné... zakomponovat do toho "profile picture"

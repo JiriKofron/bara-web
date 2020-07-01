@@ -33,3 +33,13 @@
         font-weight: 300;
         line-height: 1.6rem;
 }
+
+.social-proof {
+    font-family: $monserrat;
+    font-size: 1.2rem;
+    
+    &__name {
+        font-family: $roboto;
+        font-size: 2rem;
+    }
+}

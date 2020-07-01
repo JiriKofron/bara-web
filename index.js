@@ -16,7 +16,7 @@ Vue.component('review-display', {
     el: "#review-display",
     data: {
       reviews: [
-      {id: 0, name: "Alice", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare sapien non nisi ornare laoreet. Vivamus lectus justo, pulvinar et vulputate pulvinar, euismod ac augue. Ut auctor dui in aliquam porta.", img:"https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" },
+      {id: 0, name: "Alice", content: "Nikdy jsem na terapii nebyl. Po těžkém rozchodu jsem se ale rozhodl to vyzkoušet a už po prvním sezení s Bárou jsem byl nadšený. Teď už věřím, že můžu být v životě zase štastný.", img:"https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" },
       {id: 1, name: "Marchel", content: "Second comment", img:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" },
       {id: 2, name: "Philip", content: "Third comment", img:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"},
         {id: 3, name: "Patricia", content: "Fourth comment", img: "https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"

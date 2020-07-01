@@ -1,16 +1,16 @@
 .intro {
 
     h1 {
-    font-family: $roboto;
+    font-family: $raleway;
     font-size: 4rem;
     font-weight: 100;
     line-height: 5.5rem;
-    padding-left: 1.4rem;
+    padding-left: 1rem;
     margin-bottom: 2rem;
     }
 
     h2 {
-    font-family: $roboto;
+    font-family: $raleway;
     font-size: 1.6rem;
     font-weight: 100;
     }
@@ -34,12 +34,7 @@
         line-height: 1.6rem;
 }
 
-.social-proof {
-    font-family: $monserrat;
-    font-size: 1.2rem;
-    
-    &__name {
-        font-family: $roboto;
-        font-size: 2rem;
-    }
+.review-name {
+font-size: 3rem;
+      font-family: $raleway;
 }

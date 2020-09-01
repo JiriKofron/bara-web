@@ -16,10 +16,10 @@ Vue.component('review-display', {
     el: "#review-display",
     data: {
       reviews: [
-      {id: 0, name: "Alice", content: "Nikdy jsem na terapii nebyl. Po těžkém rozchodu jsem se ale rozhodl to vyzkoušet a už po prvním sezení s Bárou jsem byl nadšený. Teď už věřím, že můžu být v životě zase štastný.", img:"https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" },
-      {id: 1, name: "Marchel", content: "Second comment", img:"https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" },
-      {id: 2, name: "Philip", content: "Third comment", img:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"},
-        {id: 3, name: "Patricia", content: "Fourth comment", img: "https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
+      {id: 0, name: "Alice", content: "Nikdy jsem na terapii nebyl. Po těžkém rozchodu jsem se ale rozhodl to vyzkoušet a už po prvním sezení s Bárou jsem byl nadšený. Teď už věřím, že můžu být v životě zase štastný.", img:"./icons/png/An-woman.png"},
+      {id: 1, name: "Marchel", content: "First Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", img:"./icons/png/An-man-dark.png" },
+      {id: 2, name: "Philip", content: "Second Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.", img:"./icons/png/An-man-dark.png"},
+        {id: 3, name: "Patricia", content: "Third Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", img: "./icons/png/An-woman-dark.png"
         }
       ]
     }

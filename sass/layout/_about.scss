@@ -1,0 +1,22 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $primary-blue; 
+    margin: 0;
+
+    &__text {
+        padding-bottom: 1rem;
+        padding-left: .8rem;
+        padding-right: .8rem;
+    }
+
+    .no-mobile {
+        display: none;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+}

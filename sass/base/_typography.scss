@@ -22,8 +22,9 @@
     &__text {
         font-family: $monserrat;
         font-size: 1.4rem;
-        line-height: 1.6rem;
+        line-height: 1.3;
         font-weight: 300;
+        color: $n-darkest-blue;
     }
 }
 
@@ -37,4 +38,48 @@
 .review-name {
 font-size: 3rem;
       font-family: $raleway;
+}
+
+.review-text {
+    font-size: 1.2rem;
+    font-family: $monserrat;
+}
+
+.contact {
+
+    color: $n-gold;
+
+    h1 {
+        font-family: $raleway;
+        font-weight: 100;
+        font-size: 4rem;
+    }
+
+    &__detail {
+        font-family: $raleway;
+        font-size: 1.5rem;
+    }
+
+    a {
+        color: $n-gold;
+    }
+}
+
+.about {
+
+    color: white;
+
+    h1 {
+        font-family: $raleway;
+        font-weight: 100;
+        font-size: 4rem;
+    }
+
+    &__text {
+        font-family: $monserrat;
+        color: $n-darkest-blue;
+        font-size: 1.4rem;
+        font-weight: 300;
+        color: white;
+    }
 }

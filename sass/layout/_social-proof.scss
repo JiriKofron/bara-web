@@ -1,27 +1,26 @@
-.container {
+.carousel-container {
     width: 100vw;
-    height: 40rem;
+    height: 33rem;
+    background: linear-gradient(to bottom, white 26%, $primary-blue 26% );
   }
   
   .main-carousel {
-    height: 25rem;
+    height: 30rem;
   }
   
   .carousel-cell {
     /*border: 1px solid green;*/
     width: 85%;
-    height: 25rem;
+    height: 27rem;
     padding-top: 2rem;
     
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $primary-blue;
     color:white;
-
     
     img {
-      width: 40%;
+      width: 10rem;
       /*border: 1px solid red;*/
     }
     
@@ -34,5 +33,6 @@
     .review-text {
       margin-top: 2rem;
       margin-bottom: 1rem;
+      width: 90%;
     }
   }

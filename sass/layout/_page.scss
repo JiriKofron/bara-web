@@ -4,3 +4,11 @@
     flex-direction: column;
     align-items: center;
 }
+
+.waves-up {
+    filter: drop-shadow(4px -8px 10px rgba($primary-blue, 0.6))
+}
+
+.waves-down {
+    filter: drop-shadow(-4px 8px 10px rgba($primary-blue, 0.6))
+}

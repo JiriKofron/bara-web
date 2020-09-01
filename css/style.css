@@ -39,9 +39,11 @@ body {
 
 .service-cards {
   font-family: "Monserrat", serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.6rem; }
+  .service-cards a {
+    color: white; }
 
 .review-name {
   font-size: 3rem;
@@ -74,6 +76,7 @@ body {
     color: #1A1D61;
     font-size: 1.4rem;
     font-weight: 300;
+    line-height: 1.4;
     color: white; }
 
 .page-container {
@@ -81,6 +84,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+.waves-up {
+  filter: drop-shadow(4px -8px 10px rgba(50, 143, 224, 0.6)); }
+
+.waves-down {
+  filter: drop-shadow(-4px 8px 10px rgba(50, 143, 224, 0.6)); }
 
 .navbar {
   display: none; }
@@ -105,16 +114,24 @@ body {
   margin-bottom: 2rem; }
 
 .service-cards {
-  list-style: none; }
+  list-style: none;
+  margin: 3rem 0; }
   .service-cards li {
     display: flex;
-    height: 6rem;
+    flex-direction: column;
+    background-color: #E05B12;
     align-items: center;
-    padding: 0 .5rem;
-    margin: 1rem; }
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+    margin: 2rem 1rem;
+    color: white;
+    border-radius: 2rem;
+    box-shadow: 0px 0px 10px 4px #772e25; }
   .service-cards img {
-    width: 4rem;
-    padding-right: 1rem; }
+    width: 7rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    color: white; }
 
 .carousel-container {
   width: 100vw;
@@ -183,6 +200,9 @@ body {
   .about h1 {
     text-align: center;
     margin: 1.5rem 0; }
+
+html {
+  scroll-behavior: smooth; }
 
 main {
   display: flex;

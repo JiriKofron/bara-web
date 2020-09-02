@@ -17,6 +17,12 @@
 
 }
 
+.headline {
+    font-family: $raleway;
+        font-weight: 100;
+        font-size: 4rem;
+}
+
 .service-text {
 
     &__text {
@@ -35,7 +41,7 @@
         line-height: 1.6rem;
 
         a {
-            color: white;
+            color: $n-darkest-blue;
         }
 }
 

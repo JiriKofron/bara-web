@@ -12,3 +12,15 @@
 .waves-down {
     filter: drop-shadow(-4px 8px 10px rgba($primary-blue, 0.6))
 }
+
+.headline {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+hr {
+    width: 50%;
+    border: 1px solid $n-red;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}

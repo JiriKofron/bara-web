@@ -16,6 +16,7 @@
     h1 {
         text-align: center;
         margin-bottom: 1rem;
+
     }
 
     &__icons {
@@ -24,6 +25,13 @@
         color: $n-gold;
         padding-bottom: .8rem;
     }
+
+}
+
+#contact__horizontal-line {
+    border: 1px solid $n-gold;
+    margin: 1rem auto;
+    width: 70%;
 
 }
 

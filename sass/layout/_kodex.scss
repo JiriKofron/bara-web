@@ -1,0 +1,12 @@
+.kodex {
+    background-color: $primary-blue;
+    padding-bottom: 2rem;
+
+    &__text {
+        padding: 0 1rem;
+
+        p {
+            padding-bottom: 1rem;
+        }
+    }
+}

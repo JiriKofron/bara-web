@@ -19,18 +19,28 @@
 
 .headline {
     font-family: $raleway;
-        font-weight: 100;
+        font-weight: 400;
         font-size: 4rem;
+        color: $n-darkest-blue;
+
+        &--gold {
+            color: $n-gold;
+        }
 }
 
 .service-text {
 
     &__text {
         font-family: $monserrat;
-        font-size: 1.4rem;
-        line-height: 1.3;
+        font-size: 1.6rem;
+        line-height: 1.4;
         font-weight: 300;
         color: $n-darkest-blue;
+
+        &--b {
+            font-size: 1.4rem;
+            line-height: 1.3;
+        }
     }
 }
 
@@ -59,12 +69,6 @@ font-size: 3rem;
 
     color: $n-gold;
 
-    h1 {
-        font-family: $raleway;
-        font-weight: 100;
-        font-size: 4rem;
-    }
-
     &__detail {
         font-family: $raleway;
         font-size: 1.5rem;
@@ -75,14 +79,29 @@ font-size: 3rem;
     }
 }
 
+.kodex {
+    h1 {
+        color: white;
+        padding-top: 2rem;
+    }
+
+    &__text p {
+        color: white;
+        font-family: $monserrat;
+
+
+    }
+}
+
 .about {
 
     color: white;
 
     h1 {
         font-family: $raleway;
-        font-weight: 100;
+        font-weight: 400;
         font-size: 4rem;
+        color: white;
     }
 
     &__text {
@@ -90,7 +109,7 @@ font-size: 3rem;
         color: $n-darkest-blue;
         font-size: 1.4rem;
         font-weight: 300;
-        line-height: 1.4;
+        line-height: 1.5;
         color: white;
     }
 }

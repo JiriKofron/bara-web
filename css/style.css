@@ -32,15 +32,21 @@ body {
 
 .headline {
   font-family: "Raleway", sans-serif;
-  font-weight: 100;
-  font-size: 4rem; }
+  font-weight: 400;
+  font-size: 4rem;
+  color: #1A1D61; }
+  .headline--gold {
+    color: #E0BA1B; }
 
 .service-text__text {
   font-family: "Monserrat", serif;
-  font-size: 1.4rem;
-  line-height: 1.3;
+  font-size: 1.6rem;
+  line-height: 1.4;
   font-weight: 300;
   color: #1A1D61; }
+  .service-text__text--b {
+    font-size: 1.4rem;
+    line-height: 1.3; }
 
 .service-cards {
   font-family: "Monserrat", serif;
@@ -60,28 +66,33 @@ body {
 
 .contact {
   color: #E0BA1B; }
-  .contact h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 100;
-    font-size: 4rem; }
   .contact__detail {
     font-family: "Raleway", sans-serif;
     font-size: 1.5rem; }
   .contact a {
     color: #E0BA1B; }
 
+.kodex h1 {
+  color: white;
+  padding-top: 2rem; }
+
+.kodex__text p {
+  color: white;
+  font-family: "Monserrat", serif; }
+
 .about {
   color: white; }
   .about h1 {
     font-family: "Raleway", sans-serif;
-    font-weight: 100;
-    font-size: 4rem; }
+    font-weight: 400;
+    font-size: 4rem;
+    color: white; }
   .about__text {
     font-family: "Monserrat", serif;
     color: #1A1D61;
     font-size: 1.4rem;
     font-weight: 300;
-    line-height: 1.4;
+    line-height: 1.5;
     color: white; }
 
 .page-container {
@@ -104,13 +115,14 @@ hr {
   width: 50%;
   border: 1px solid #E05B12;
   margin: 0 auto;
-  margin-bottom: 2rem; }
+  margin-bottom: 3rem; }
 
 .navbar {
   display: none; }
 
 .intro {
   height: 80vh;
+  min-height: 35rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,7 +138,7 @@ hr {
   padding-bottom: 3rem;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 1.5rem; }
 
 .service-cards {
   list-style: none;
@@ -176,7 +188,7 @@ hr {
 .contact {
   display: flex;
   flex-direction: column;
-  margin-top: 6rem;
+  margin-top: 8rem;
   margin-bottom: 2rem;
   width: 100%; }
   .contact__detail {
@@ -192,11 +204,11 @@ hr {
     font-size: 5rem;
     font-weight: 200;
     color: #E0BA1B;
-    padding-bottom: .8rem; }
+    padding-bottom: 1.2rem; }
 
 #contact__horizontal-line {
   border: 1px solid #E0BA1B;
-  margin: 1rem auto;
+  margin: 2rem auto;
   width: 70%; }
 
 .far .fas {
@@ -209,11 +221,19 @@ hr {
   background-color: #328FE0;
   margin: 0; }
   .about__text {
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     padding-left: .8rem;
     padding-right: .8rem; }
   .about .no-mobile {
     display: none; }
+
+.kodex {
+  background-color: #328FE0;
+  padding-bottom: 2rem; }
+  .kodex__text {
+    padding: 0 1rem; }
+    .kodex__text p {
+      padding-bottom: 1rem; }
 
 html {
   scroll-behavior: smooth; }

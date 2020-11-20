@@ -1,7 +1,7 @@
 .contact {
     display: flex;
     flex-direction: column;
-    margin-top: 6rem;
+    margin-top: 8rem;
     margin-bottom: 2rem;
     width: 100%;
 
@@ -23,14 +23,14 @@
         font-size: 5rem;
         font-weight: 200;
         color: $n-gold;
-        padding-bottom: .8rem;
+        padding-bottom: 1.2rem;
     }
 
 }
 
 #contact__horizontal-line {
     border: 1px solid $n-gold;
-    margin: 1rem auto;
+    margin: 2rem auto;
     width: 70%;
 
 }

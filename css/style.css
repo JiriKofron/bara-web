@@ -33,10 +33,13 @@ body {
 .headline {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 4rem;
-  color: #1A1D61; }
+  font-size: 4rem; }
+  .headline--blue {
+    color: #1A1D61; }
   .headline--gold {
     color: #E0BA1B; }
+  .headline--white {
+    color: white; }
 
 .service-text__text {
   font-family: "Monserrat", serif;
@@ -72,28 +75,40 @@ body {
   .contact a {
     color: #E0BA1B; }
 
-.kodex h1 {
-  color: white;
-  padding-top: 2rem; }
-
 .kodex__text p {
   color: white;
   font-family: "Monserrat", serif; }
 
 .about {
   color: white; }
-  .about h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: 400;
-    font-size: 4rem;
-    color: white; }
   .about__text {
     font-family: "Monserrat", serif;
     color: #1A1D61;
     font-size: 1.4rem;
-    font-weight: 300;
-    line-height: 1.5;
+    line-height: 1.4;
     color: white; }
+
+.cenik h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  font-size: 2rem; }
+
+.cenik span {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700; }
+
+.cenik li {
+  font-size: 1.4rem; }
+  .cenik li p {
+    font-family: "Monserrat", serif;
+    font-size: 1.2rem; }
+
+address {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5; }
 
 .page-container {
   width: 100vw;
@@ -219,7 +234,8 @@ hr {
   flex-direction: column;
   justify-content: center;
   background-color: #328FE0;
-  margin: 0; }
+  margin: 0;
+  padding-bottom: 2rem; }
   .about__text {
     padding-bottom: 2rem;
     padding-left: .8rem;
@@ -230,10 +246,56 @@ hr {
 .kodex {
   background-color: #328FE0;
   padding-bottom: 2rem; }
+  .kodex h1 {
+    padding-top: 2rem; }
   .kodex__text {
     padding: 0 1rem; }
     .kodex__text p {
       padding-bottom: 1rem; }
+
+.cenik {
+  padding: 0 1rem;
+  white-space: pre-line; }
+  .cenik h1 {
+    padding-top: 3rem; }
+  .cenik h3 {
+    text-align: center; }
+  .cenik ul {
+    list-style: none;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .cenik ul li {
+      width: 80%;
+      padding: 1rem 1rem;
+      margin: 1rem auto;
+      text-align: center;
+      color: #1A1D61;
+      background: rgba(224, 186, 27, 0.2);
+      border-radius: 2rem; }
+      .cenik ul li span {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0; }
+      .cenik ul li p {
+        margin: 1rem auto;
+        text-align: left; }
+
+footer {
+  width: 100%;
+  background: #E05B12;
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -2rem; }
+
+address {
+  padding: 1rem;
+  white-space: pre-line; }
+  address hr {
+    width: 100%;
+    border: 1px solid white;
+    margin: 1.5rem 0; }
 
 html {
   scroll-behavior: smooth; }

@@ -1,0 +1,45 @@
+.cenik {
+    
+    padding: 0 1rem;
+    white-space: pre-line;
+
+    h1 {
+        padding-top: 3rem;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        margin: 1rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        li {
+            width: 80%;
+            padding: 1rem 1rem;
+            margin: 1rem auto;
+            text-align: center;
+            color: $n-darkest-blue;
+            background: rgba($n-gold, 0.2);
+            border-radius: 2rem;
+
+            span {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                margin: 1rem 0;
+            }
+
+            p {
+                margin: 1rem auto;
+                text-align: left;
+            }
+        }
+
+    }
+    
+}

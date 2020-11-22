@@ -1,3 +1,71 @@
+.btn{
+    width: 4.2rem;
+    height: 4rem;
+    background: $n-red;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
 .navbar {
-    display: none;
+    display: flex;
+    position: fixed;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    padding-top: 1rem;
+    width: 100%;
+    height: 2rem;
+    // border: 1px solid red;
+
+    &__nav, &__logo {
+        display: none;
+    }
+
+    &__ham {
+        z-index: 1000;
+        margin-right: .7rem;
+    }
+
+    &__ham:hover {
+        scale: 1.1;
+    }
+}
+
+.sm-menu {
+    display: flex;
+    background-color: $n-dark-blue;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    &__nav {
+        padding: 2rem 0;
+    }
+
+    &__close {
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        margin-right: .7rem;
+    }
+
+    &__close:hover {
+        scale: 1.1;
+    }
+}
+
+.sm-menu-enter-active {
+    transition: all .3s;
+}
+
+.sm-menu-enter   {
+    transform: translate(100%);
+    opacity: 0;
 }

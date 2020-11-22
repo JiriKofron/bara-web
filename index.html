@@ -29,14 +29,30 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <div id="logo"><a href="#uvod">
-      <div class="logocircle">
+  <section id="nav-container">
+  <nav class="navbar" id="navbar">
+    <div class="navbar__logo" id="logo"><a href="#uvod">
+      <div class="navbar__logo__logocircle">
           <p>bp</p>
       </div>
-  </a>
-  </div>
+     </a> 
+    </div>
+    <a class="navbar__nav" href="">Služby</a>
+    <a class="navbar__nav" href="">O mně</a>
+    <a class="navbar__nav" href="">Ceník</a>
+    <a class="navbar__nav" href="">Kontakt</a>
+    <button class="btn navbar__ham" id="ham" v-on:click="clicked">Menu</button> 
   </nav>
+  <transition name="sm-menu">
+  <section class="sm-menu" v-show="!isHidden">
+    <button class=" btn sm-menu__close" id="close" v-on:click="clicked">X</button>
+    <a class="sm-menu__nav" href="#sluzby" v-on:click="clicked">Služby</a>
+    <a class="sm-menu__nav" href="#o_mne" v-on:click="clicked">O mně</a>
+    <a class="sm-menu__nav" href="#cenik" v-on:click="clicked">Ceník</a>
+    <a class="sm-menu__nav" href="#contact" v-on:click="clicked">Kontakt</a>
+  </section>
+</transition>
+</section>
   <main>
     <section class="intro">
       <img src="pics/b-avatar.png" alt="Barbora Pšenicová">
@@ -68,7 +84,7 @@
         <div class="contact__detail"><i class="fas fa-mobile-alt contact__icons"></i> 
         +420 728 242 002</div>                            
     </section>
-    <section class="service-text">
+    <section class="service-text" id="sluzby">
       <h1 class="headline headline-blue">Služby</h1>
       <hr>
     <article>
@@ -103,7 +119,7 @@
 </article>
   </section>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="waves-down"><path fill="#328FE0" fill-opacity="1" d="M0,32L34.3,74.7C68.6,117,137,203,206,197.3C274.3,192,343,96,411,53.3C480,11,549,21,617,42.7C685.7,64,754,96,823,128C891.4,160,960,192,1029,224C1097.1,256,1166,288,1234,256C1302.9,224,1371,128,1406,80L1440,32L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
-  <section class="cenik">         
+  <section class="cenik" id="cenik">         
     <h1 class="headline headline--gold">Ceník</h1>
     <hr>
 <h3>Platný pro rok 2021 </h3>
@@ -121,7 +137,7 @@
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -200 1440 500" class="waves-up">
     <path fill="#328FE0" fill-opacity="1" d="M0,192L60,170.7C120,149,240,107,360,101.3C480,96,600,128,720,149.3C840,171,960,181,1080,160C1200,139,1320,85,1380,58.7L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
   </svg>
-    <section class="about">
+    <section class="about" id="o_mne">
       <h1 class="headline headline--white">O mně</h1>
       <hr>
     <p class="about__text">

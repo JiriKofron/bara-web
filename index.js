@@ -1,3 +1,15 @@
+const app = new Vue ({
+  el: '#nav-container',
+  data: {
+    isHidden: true
+  },
+  methods: {
+    clicked: function() {
+      this.isHidden = !this.isHidden;
+    }
+  }
+})
+
 
 // Declaring vue component with template, which is card of each person. It must be contained in a div, otherwise the same tags don't work and show
 
@@ -12,7 +24,7 @@ Vue.component('review-display', {
   //new object, el class binding the object to html id - see html
   // socialProofs are actualy the cards with data of each person. Id helps for looping  = it is a key for binding - see html
   // Each now person now can be added just to add the properities to data array, rather than wet the html
-  var socialCard = new Vue({
+  const socialCard = new Vue({
     el: "#review-display",
     data: {
       reviews: [
@@ -25,8 +37,8 @@ Vue.component('review-display', {
     }
   });
   
-  var elem = document.querySelector('.main-carousel');
-  var flkty = new Flickity( elem, {
+  const elem = document.querySelector('.main-carousel');
+  const flkty = new Flickity( elem, {
     // options
     adaptiveHeight: true,
     wrapAround: true

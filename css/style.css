@@ -8,7 +8,7 @@ a {
   text-decoration: none; }
 
 body {
-  min-width: 300px;
+  min-width: 290px;
   max-width: 2400px;
   font-size: 15px;
   overflow-x: hidden;
@@ -17,17 +17,29 @@ body {
   flex-direction: column;
   align-items: center; }
 
+.btn {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700; }
+
+.sm-menu__nav {
+  font-family: "Raleway", sans-serif;
+  font-size: 3rem;
+  font-weight: 100;
+  color: white; }
+
 .intro h1 {
   font-family: "Raleway", sans-serif;
-  font-size: 4rem;
+  font-size: 3.7rem;
   font-weight: 100;
   line-height: 5.5rem;
-  padding-left: 1rem;
+  text-align: center;
   margin-bottom: 2rem; }
 
 .intro h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 100; }
 
 .headline {
@@ -111,7 +123,7 @@ address {
   line-height: 1.5; }
 
 .page-container {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center; }
@@ -132,8 +144,59 @@ hr {
   margin: 0 auto;
   margin-bottom: 3rem; }
 
+.btn {
+  width: 4.2rem;
+  height: 4rem;
+  background: #E05B12;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer; }
+
 .navbar {
-  display: none; }
+  display: flex;
+  position: fixed;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  padding-top: 1rem;
+  width: 100%;
+  height: 2rem; }
+  .navbar__nav, .navbar__logo {
+    display: none; }
+  .navbar__ham {
+    z-index: 1000;
+    margin-right: .7rem; }
+  .navbar__ham:hover {
+    scale: 1.1; }
+
+.sm-menu {
+  display: flex;
+  background-color: #3D42E0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10; }
+  .sm-menu__nav {
+    padding: 2rem 0; }
+  .sm-menu__close {
+    position: absolute;
+    top: 1rem;
+    right: 0;
+    margin-right: .7rem; }
+  .sm-menu__close:hover {
+    scale: 1.1; }
+
+.sm-menu-enter-active {
+  transition: all .3s; }
+
+.sm-menu-enter {
+  transform: translate(100%);
+  opacity: 0; }
 
 .intro {
   height: 80vh;
@@ -173,7 +236,7 @@ hr {
     padding-bottom: 1rem; }
 
 .carousel-container {
-  width: 100vw;
+  width: 100%;
   height: 33rem;
   background: linear-gradient(to bottom, white 26%, #328FE0 26%); }
 

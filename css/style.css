@@ -52,6 +52,8 @@ body {
     color: #E0BA1B; }
   .headline--white {
     color: white; }
+  .headline--small {
+    font-size: 3rem; }
 
 .service-text__text {
   font-family: "Monserrat", serif;
@@ -237,16 +239,18 @@ hr {
 
 .carousel-container {
   width: 100%;
-  height: 33rem;
+  height: 44rem;
   background: linear-gradient(to bottom, white 26%, #328FE0 26%); }
+  .carousel-container__hr {
+    margin-bottom: 0; }
 
 .main-carousel {
-  height: 30rem; }
+  height: 37rem; }
 
 .carousel-cell {
   /*border: 1px solid green;*/
   width: 85%;
-  height: 27rem;
+  height: 34rem;
   padding-top: 2rem;
   display: flex;
   flex-direction: column;

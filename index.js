@@ -28,11 +28,10 @@ Vue.component('review-display', {
     el: "#review-display",
     data: {
       reviews: [
-      {id: 0, name: "Alice", content: "Nikdy jsem na terapii nebyl. Po těžkém rozchodu jsem se ale rozhodl to vyzkoušet a už po prvním sezení s Bárou jsem byl nadšený. Teď už věřím, že můžu být v životě zase štastný.", img:"./icons/png/An-woman.png"},
-      {id: 1, name: "Marchel", content: "First Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", img:"./icons/png/An-man-dark.png" },
-      {id: 2, name: "Philip", content: "Second Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.", img:"./icons/png/An-man-dark.png"},
-        {id: 3, name: "Patricia", content: "Third Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.", img: "./icons/png/An-woman-dark.png"
-        }
+      {id: 0, name: "Alice", content: "Docela často si vzpomenu na věci, které mi Bára řekla a že pro tu dobu pro mě bylo klíčové mít v ní tu oporu. Chci říct, že je moc fajn to, co dělá. Vlastně i ona byla tím, kdo mi dodal nějaké odhodlání, ze kterého jsem mohla čerpat.", img:"./icons/png/Bussiness-woman.png"},
+      {id: 1, name: "Michal", content: "Nikdy jsem na terapii nebyl. Po těžkém rozchodu jsem se rozhodl ji vyzkoušet a už po prvním sezení s Bárou jsem byl nadšený. Teď už věřím, že můžu být v životě šťastný.", img:"./icons/png/Bussiness-man.png" },
+      {id: 2, name: "Václav", content: "Terapie mi neuvěřitelným způsobem vylepšila život. Naučil jsem se zvládat obtížné životní situace, prožívat emoce a hlavně začal sám sebe respektovat. Jít na terapii bylo jedno z nejlepších rozhodnutí mého života a Báry si neskutečně vážím za její přístup, který by podle mě nemohl být lepší.", img:"./icons/png/Bussiness-man-2.png"}
+      
       ]
     }
   });

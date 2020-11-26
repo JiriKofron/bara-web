@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding-top: 2rem;
     padding-bottom: 3rem;
     margin-bottom: 1.5rem;
@@ -9,5 +10,6 @@
     &__text, &__text--b {
         padding-left: 0.8rem;
         padding-right: 0.8rem;
+        max-width: 30rem;
     }
 }

@@ -3,6 +3,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    hr {
+        width: 50%;
+        border: 1px solid $n-red;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
 }
 
 .waves-up {
@@ -18,9 +25,12 @@
     margin-bottom: .5rem;
 }
 
-hr {
-    width: 50%;
-    border: 1px solid $n-red;
-    margin: 0 auto;
-    margin-bottom: 3rem;
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

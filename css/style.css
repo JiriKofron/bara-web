@@ -1,4 +1,7 @@
 @import "https://unpkg.com/flickity@2/dist/flickity.min.css";
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +12,19 @@ a {
 
 body {
   min-width: 290px;
-  max-width: 2400px;
+  max-width: 2000px;
   font-size: 15px;
   overflow-x: hidden;
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; }
 
 .btn {
   font-family: "Raleway", sans-serif;
@@ -32,7 +41,7 @@ body {
 .intro h1 {
   font-family: "Raleway", sans-serif;
   font-size: 3.7rem;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 5.5rem;
   text-align: center;
   margin-bottom: 2rem; }
@@ -40,7 +49,7 @@ body {
 .intro h2 {
   font-family: "Raleway", sans-serif;
   font-size: 1.4rem;
-  font-weight: 100; }
+  font-weight: 200; }
 
 .headline {
   font-family: "Raleway", sans-serif;
@@ -69,7 +78,7 @@ body {
   font-family: "Monserrat", serif;
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.6rem; }
+  line-height: 1.4; }
   .service-cards a {
     color: #1A1D61; }
 
@@ -129,6 +138,11 @@ address {
   display: flex;
   flex-direction: column;
   align-items: center; }
+  .page-container hr {
+    width: 50%;
+    border: 1px solid #E05B12;
+    margin: 0 auto;
+    margin-bottom: 3rem; }
 
 .waves-up {
   filter: drop-shadow(4px -8px 10px rgba(50, 143, 224, 0.6)); }
@@ -140,11 +154,13 @@ address {
   text-align: center;
   margin-bottom: .5rem; }
 
-hr {
-  width: 50%;
-  border: 1px solid #E05B12;
-  margin: 0 auto;
-  margin-bottom: 3rem; }
+html {
+  scroll-behavior: smooth; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .btn {
   width: 4.2rem;
@@ -214,11 +230,15 @@ hr {
     box-sizing: border-box; }
 
 .service-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   padding-top: 2rem;
   padding-bottom: 3rem;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
   margin-bottom: 1.5rem; }
+  .service-text__text, .service-text__text--b {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem; }
 
 .service-cards {
   list-style: none;
@@ -233,25 +253,24 @@ hr {
     border-radius: 2rem;
     box-shadow: 0px 0px 10px 5px #D8F2FF; }
   .service-cards img {
-    width: 7rem;
-    padding-right: 1rem;
+    width: 9rem;
+    padding-top: 1rem;
     padding-bottom: 1rem; }
 
 .carousel-container {
   width: 100%;
   height: 44rem;
-  background: linear-gradient(to bottom, white 26%, #328FE0 26%); }
+  background: linear-gradient(to bottom, white 30%, #328FE0 30%); }
   .carousel-container__hr {
     margin-bottom: 0; }
 
 .main-carousel {
-  height: 37rem; }
+  height: 34rem; }
 
 .carousel-cell {
   /*border: 1px solid green;*/
   width: 85%;
   height: 34rem;
-  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -287,11 +306,10 @@ hr {
     font-weight: 200;
     color: #E0BA1B;
     padding-bottom: 1.2rem; }
-
-#contact__horizontal-line {
-  border: 1px solid #E0BA1B;
-  margin: 2rem auto;
-  width: 70%; }
+  .contact hr:last-of-type {
+    border: 1px solid #E0BA1B;
+    margin: 2rem auto;
+    width: 70%; }
 
 .far .fas {
   font-weight: 200; }
@@ -363,11 +381,3 @@ address {
     width: 100%;
     border: 1px solid white;
     margin: 1.5rem 0; }
-
-html {
-  scroll-behavior: smooth; }
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }

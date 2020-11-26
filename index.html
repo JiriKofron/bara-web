@@ -41,7 +41,7 @@
     <a class="navbar__nav" href="">O mně</a>
     <a class="navbar__nav" href="">Ceník</a>
     <a class="navbar__nav" href="">Kontakt</a>
-    <button class="btn navbar__ham" id="ham" v-on:click="clicked">Menu</button> 
+    <button class="btn navbar__ham" id="open" v-on:click="clicked">Menu</button> 
   </nav>
   <transition name="sm-menu">
   <section class="sm-menu" v-show="!isHidden">
@@ -51,7 +51,7 @@
     <a class="sm-menu__nav" href="#cenik" v-on:click="clicked">Ceník</a>
     <a class="sm-menu__nav" href="#contact" v-on:click="clicked">Kontakt</a>
   </section>
-</transition>
+  </transition>
 </section>
   <main>
     <section class="intro">
@@ -63,7 +63,6 @@
     <div class="page-container">
     <section class="service-text">
       <p class="service-text__text">Konzultace v rámci terapie považuji za společný prostor, v němž Vám pomohu dojít ke změně a úlevě prostřednictvím pochopení, nebo odstranění pocitů, které vám ztrpčují život. </p>
-      <!--Dodat tlačítko objednat se, které otevře pop up s formulářem a kontakty, dodat navigační tlačítko "Menu"-->
     </section>
     <section class="carousel-container">
       <h1 class="headline headline--small headline--blue">Reference</h1>
@@ -82,7 +81,7 @@
         <hr>
         <div class="contact__detail"><i class="far fa-envelope contact__icons"></i> 
         <a href="mailto:b.psenicova@gmail.com">b.psenicova@gmail.com</a></div>
-        <hr id="contact__horizontal-line">
+        <hr>
         <div class="contact__detail"><i class="fas fa-mobile-alt contact__icons"></i> 
         +420 728 242 002</div>                            
     </section>
@@ -111,30 +110,26 @@
     <h1 class="headline headline--white">Kodex</h1>
     <hr>
     <article class="kodex__text service-text__text--b">
-    <p>Konzultace nemohou být hrazené zdravotní pojišťovnou. Hradit je možné pouze bezhotovostně z bankovního účtu. Své služby fakturuji.</p>
-
-<p><strong>Konzultace se domlouvá předem</strong>, ideálně mailem, na konkrétní hodinu dle našich vzájemných možností (i ve večerních hodinách).</p>
-
-<p><strong>Zrušení konzultace je možné bezplatně 48 hodin před </strong> domluvenou konzultací. Ukončení terapie je možné kdykoli, záleží na Vás, Vašich možnostech a potřebách. Velmi důležitá je důvěra a samozřejmě má mlčenlivost. Vše, co na společných setkáních řeknete, považuji za důvěrné.</p>
-
-<p>Vycházím hodně ze systemické terapie a konstruktivistických teorií. Procházím výcvikem Terapie v postmoderně a díky tomu mě oslovují různé druhy práce, jako například narativní nebo zakázkový přístup, práce s reflektujícím týmem a další. Vycházím z postmoderních psychoterapeutických škol a pracuji hojně s teoriemi předních psychoterapeutických osobností, jako jsou Michael White, Kurt Ludewig nebo Harlene Anderson. Mou velkou inspirací je práce terapeutky Sabine Vermeire.</p>
-</article>
+      <p>Konzultace nemohou být hrazené zdravotní pojišťovnou. Hradit je možné pouze bezhotovostně z bankovního účtu. Své služby fakturuji.</p>
+      <p><strong>Konzultace se domlouvá předem</strong>, ideálně mailem, na konkrétní hodinu dle našich vzájemných možností (i ve večerních hodinách).</p>  <p><strong>Zrušení konzultace je možné bezplatně 48 hodin před </strong> domluvenou konzultací. Ukončení terapie je možné kdykoli, záleží na Vás, Vašich možnostech a potřebách. Velmi důležitá je důvěra a samozřejmě má mlčenlivost. Vše, co na společných setkáních řeknete, považuji za důvěrné.</p>  
+      <p>Vycházím hodně ze systemické terapie a konstruktivistických teorií. Procházím výcvikem Terapie v postmoderně a díky tomu mě oslovují různé druhy práce, jako například narativní nebo zakázkový přístup, práce s reflektujícím týmem a další. Vycházím z postmoderních psychoterapeutických škol a pracuji hojně s teoriemi předních psychoterapeutických osobností, jako jsou Michael White, Kurt Ludewig nebo Harlene Anderson. Mou velkou inspirací je práce terapeutky Sabine Vermeire.</p>
+    </article>
   </section>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="waves-down"><path fill="#328FE0" fill-opacity="1" d="M0,32L34.3,74.7C68.6,117,137,203,206,197.3C274.3,192,343,96,411,53.3C480,11,549,21,617,42.7C685.7,64,754,96,823,128C891.4,160,960,192,1029,224C1097.1,256,1166,288,1234,256C1302.9,224,1371,128,1406,80L1440,32L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z"></path></svg>
   <section class="cenik" id="cenik">         
     <h1 class="headline headline--gold">Ceník</h1>
     <hr>
-<h3>Platný pro rok 2021 </h3>
-<ul>                
-<li><em>Individuální konzultace</em>
-    <span>650,- Kč</span> 
-</li>
-<li><em>Skupinová konzultace</em>
-    <span>800,- Kč </span> 
-</li>
-<li><em>Konzultace s reflektujícím týmem</em>
-<p>Po dohodě s Vámi mohu na konzultaci přizvat další odborníky, kteří po jeho skončení sdělí své postřehy. Mohou Vám tak nabídnout alternativní možnosti.</p></li>
-</ul>
+    <h3>Platný pro rok 2021 </h3>
+      <ul>                
+        <li><em>Individuální konzultace</em>
+          <span>650,- Kč</span> 
+        </li>
+        <li><em>Skupinová konzultace</em>
+          <span>800,- Kč </span> 
+        </li>
+        <li><em>Konzultace s reflektujícím týmem</em>
+          <p>Po dohodě s Vámi mohu na konzultaci přizvat další odborníky, kteří po jeho skončení sdělí své postřehy. Mohou Vám tak nabídnout alternativní možnosti.</p></li>
+      </ul>
   </section>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -200 1440 500" class="waves-up">
     <path fill="#328FE0" fill-opacity="1" d="M0,192L60,170.7C120,149,240,107,360,101.3C480,96,600,128,720,149.3C840,171,960,181,1080,160C1200,139,1320,85,1380,58.7L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
@@ -142,24 +137,22 @@
     <section class="about" id="o_mne">
       <h1 class="headline headline--white">O mně</h1>
       <hr>
-    <p class="about__text">
-      V současnosti se vzdělávám v metodách a konceptech <strong>human centered design</strong>, které pomáhají hledat možnosti a prostor pro zlepšování služeb a zaměřují se především na potřeby klientů a klientek.
-      Od roku 2018 jsem ve výcviku <strong>Terapie v postmoderně</strong> pod vedením Olgy Kunertové, která je mou odbornou garantkou.</p>
-    
-      <p class="about__text">
-      Během své pracovní kariéry jsem měla možnost se vzdělávat v mnoha různých oblastech, prošla jsem kurzem <strong>kariérového poradenství</strong>, absolvovala jsem školení k tématu sexuální asistence a osobních hranic u osob s hendikepem. Dále jsem absolvovala školení na různá témata z oblasti sociální práce, mám kurz pracovníka v sociálních službách a v neposlední řadě certifikát za školení v rámci narativních přístupů k terapii. Pro neziskové organizace konzultuji a vedu skupinové diskuse a supervize. Absolvovala jsem také kurz <strong>Komplexní výcvik v mediaci</strong> pod JUDr. Radkou Medkovou.</p>
+        <p class="about__text">
+          V současnosti se vzdělávám v metodách a konceptech <strong>human centered design</strong>, které pomáhají hledat možnosti a prostor pro zlepšování služeb a zaměřují se především na potřeby klientů a klientek.
+          Od roku 2018 jsem ve výcviku <strong>Terapie v postmoderně</strong> pod vedením Olgy Kunertové, která je mou odbornou garantkou.</p>
+        <p class="about__text">
+          Během své pracovní kariéry jsem měla možnost se vzdělávat v mnoha různých oblastech, prošla jsem kurzem <strong>kariérového poradenství</strong>, absolvovala jsem školení k tématu sexuální asistence a osobních hranic u osob s hendikepem. Dále jsem absolvovala školení na různá témata z oblasti sociální práce, mám kurz pracovníka v sociálních službách a v neposlední řadě certifikát za školení v rámci narativních přístupů k terapii. Pro neziskové organizace konzultuji a vedu skupinové diskuse a supervize. Absolvovala jsem také kurz <strong>Komplexní výcvik v mediaci</strong> pod JUDr. Radkou Medkovou.</p>
       
-      <p class="about__text no-mobile">
-      Velkým přínosem pro mé kompetence bylo podílení se na rozvoji sociálních služeb v ROZKOŠI bez RIZIKA a od roku 2018 v Proximě Sociale. V prvním případě jsem ve spolupráci s kolegyněmi pracovala na standardech kvality sociální práce a zároveň jsem se poslední rok působení v organizaci zaměřila na přestavbu systému sociální podpory pro ženy ze sexbyznysu. Realizovala jsem pilotní vzdělávání klientek (v jehož rámci vznikla svépomocná skupina žen, kterou jsem vedla) zaměřené na sdílení a zásadní témata pro ženy ze sexbyznysu. <strong>Věnovala jsem se výzkumu násilí</strong> a strukturálního násilí se ženami ze sexbyznysu (tedy i byla účastna některých sezení a pomáhala s analýzou dat a editací textů) a ve druhém případě jsem pak dostala příležitost se výzkumně podílet na projektu, který se věnoval patologickým jevům u mládeže. V rámci výzkumné kariéry jsem pracovala s politickými vězni a mapovala jejich osudy, zkoumala identitu osob vystěhovaných v důsledku průmyslové těžby, připravovala zprávu z vyloučené lokality Janov.</p>
+        <p class="about__text no-mobile">
+          Velkým přínosem pro mé kompetence bylo podílení se na rozvoji sociálních služeb v ROZKOŠI bez RIZIKA a od roku 2018 v Proximě Sociale. V prvním případě jsem ve spolupráci s kolegyněmi pracovala na standardech kvality sociální práce a zároveň jsem se poslední rok působení v organizaci zaměřila na přestavbu systému sociální podpory pro ženy ze sexbyznysu. Realizovala jsem pilotní vzdělávání klientek (v jehož rámci vznikla svépomocná skupina žen, kterou jsem vedla) zaměřené na sdílení a zásadní témata pro ženy ze sexbyznysu. <strong>Věnovala jsem se výzkumu násilí</strong> a strukturálního násilí se ženami ze sexbyznysu (tedy i byla účastna některých sezení a pomáhala s analýzou dat a editací textů) a ve druhém případě jsem pak dostala příležitost se výzkumně podílet na projektu, který se věnoval patologickým jevům u mládeže. V rámci výzkumné kariéry jsem pracovala s politickými vězni a mapovala jejich osudy, zkoumala identitu osob vystěhovaných v důsledku průmyslové těžby, připravovala zprávu z vyloučené lokality Janov.</p>
       
-      <p class="about__text">
-      Své schopnosti a vlastnosti jsem měla možnost prozkoumat v rámci školení MBTI charakteru. Vystudovala jsem sociální a kulturní antropologii - soudobé dějiny.
-    </p>
-        </section>
-  </div>
-  </main>
-  <footer>
-    <!--Jméno, adresa, ičo, copyright, kontakt-->
+        <p class="about__text">
+          Své schopnosti a vlastnosti jsem měla možnost prozkoumat v rámci školení MBTI charakteru. Vystudovala jsem sociální a kulturní antropologii - soudobé dějiny.
+        </p>
+    </section>
+</div>
+</main>
+<footer>
     <address>
       Barbora Pšenicová
       Studio Artual, z.s.
@@ -170,7 +163,7 @@
       +420 728 242 002
       <hr> &#169 2020
     </address>
-  </footer>
+</footer>
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>

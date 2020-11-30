@@ -11,6 +11,10 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    @include lg {
+        order: 1;
+    }
     
     li {
         display: flex;

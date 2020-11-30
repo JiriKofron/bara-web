@@ -31,16 +31,17 @@
 <body>
   <section id="nav-container">
   <nav class="navbar" id="navbar">
-    <div class="navbar__logo" id="logo"><a href="#uvod">
-      <div class="navbar__logo__logocircle">
-          <p>bp</p>
-      </div>
+    <div class="navbar__name" id="name"><a href="#uvod">
+      <h1> Barbora Pšenicová </h1>
+      <h2> terapeutka a konzultantka</h2>
      </a> 
     </div>
-    <a class="navbar__nav" href="">Služby</a>
-    <a class="navbar__nav" href="">O mně</a>
-    <a class="navbar__nav" href="">Ceník</a>
-    <a class="navbar__nav" href="">Kontakt</a>
+    <div class="navbar__menu">
+    <a class="navbar__menu__nav" href="#sluzby">Služby</a>
+    <a class="navbar__menu__nav" href="#o_mne">O mně</a>
+    <a class="navbar__menu__nav" href="#cenik">Ceník</a>
+    <a class="navbar__menu__nav" href="#contact">Kontakt</a>
+    </div>
     <button class="btn navbar__ham" id="open" v-on:click="clicked">Menu</button> 
   </nav>
   <transition name="sm-menu">
@@ -61,7 +62,7 @@
     </section>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="waves-down"><path fill="#328FE0" fill-opacity="1" d="M0,224L48,192C96,160,192,96,288,90.7C384,85,480,139,576,176C672,213,768,235,864,218.7C960,203,1056,149,1152,149.3C1248,149,1344,203,1392,229.3L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
     <div class="page-container">
-    <section class="service-text">
+    <section class="service-text perex">
       <p class="service-text__text">Konzultace v rámci terapie považuji za společný prostor, v němž Vám pomohu dojít ke změně a úlevě prostřednictvím pochopení, nebo odstranění pocitů, které vám ztrpčují život. </p>
     </section>
     <section class="carousel-container">
@@ -79,11 +80,13 @@
     <section class="contact" id="contact">
         <h1 class="headline headline--gold">Kontakt</h1>
         <hr>
+        <div class="contact__wrapper">
         <div class="contact__detail"><i class="far fa-envelope contact__icons"></i> 
         <a href="mailto:b.psenicova@gmail.com">b.psenicova@gmail.com</a></div>
         <hr>
         <div class="contact__detail"><i class="fas fa-mobile-alt contact__icons"></i> 
-        +420 728 242 002</div>                            
+        +420 728 242 002</div>       
+      </div>                     
     </section>
     <section class="service-text" id="sluzby">
       <h1 class="headline headline-blue">Služby</h1>
@@ -152,8 +155,8 @@
     </section>
 </div>
 </main>
-<footer>
-    <address>
+<footer class="footer">
+    <address class="footer__address">
       Barbora Pšenicová
       Studio Artual, z.s.
       Letohradská 761/62
@@ -163,6 +166,9 @@
       +420 728 242 002
       <hr> &#169 2020
     </address>
+    <figure class="footer__mapcontainer">
+    <iframe class="footer__mapcontainer__googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.382460183069!2d14.420919116016712!3d50.097847879428166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94c4eaef7c3d%3A0x278a579685e93b6f!2sArtual%20z.s.!5e0!3m2!1sen!2scz!4v1606768031457!5m2!1sen!2scz" width="90%" height="80%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </figure>
 </footer>
 <script type="text/javascript" src="index.js"></script>
 </body>

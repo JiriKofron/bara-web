@@ -10,15 +10,19 @@ a {
 
 html {
     scroll-behavior: smooth;
+    font-size: 15px;
+    @include lg {
+        font-size: 19px;
+    }
 }
 
 body {
     min-width: 290px;
     max-width: 2000px;
-    font-size: 15px;
     overflow-x: hidden;
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     align-items: center;
+
     }

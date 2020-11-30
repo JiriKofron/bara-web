@@ -5,6 +5,35 @@
     margin-bottom: 2rem;
     width: 100%;
 
+    @include md {
+        margin-top: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    @include lg {
+        display: none;
+    }
+
+    &__wrapper {
+
+        hr {
+            border: 1px solid $n-gold;
+            margin: 2rem auto;
+            width: 70%;
+        
+            @include md {
+                display: none;
+            }
+            }
+
+        @include md {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 3rem;
+        }
+    }
+
     &__detail {
         display: flex;
         flex-direction: column;
@@ -23,12 +52,6 @@
         font-weight: 200;
         color: $n-gold;
         padding-bottom: 1.2rem;
-    }
-
-    hr:last-of-type {
-        border: 1px solid $n-gold;
-    margin: 2rem auto;
-    width: 70%;
     }
 
 }

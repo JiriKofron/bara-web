@@ -6,6 +6,10 @@
     background-color: $primary-blue; 
     padding-bottom: 2rem;
 
+    @include lg {
+        order: 6;
+    }
+
     &__text {
         max-width: 35rem;
         margin: 0 auto;
@@ -16,5 +20,9 @@
 
     .no-mobile {
         display: none;
+
+        @include md {
+            display: block;
+        }
     }
 }

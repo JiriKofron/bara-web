@@ -3,6 +3,10 @@
     padding-bottom: 2rem;
     width: 100%;
 
+    @include lg {
+        order: 4;
+    }
+
     h1 {
         padding-top: 2rem;
     }

@@ -1,3 +1,9 @@
+.perex {
+    @include lg {
+        order: 1;
+    }
+}
+
 .service-text {
     width: 100%;
     display: flex;
@@ -7,9 +13,17 @@
     padding-bottom: 3rem;
     margin-bottom: 1.5rem;
 
+    @include lg {
+        order: 2;
+    }
+
     &__text, &__text--b {
         padding-left: 0.8rem;
         padding-right: 0.8rem;
         max-width: 35rem;
+
+        @include lg {
+            order: 3;
+        }
     }
 }

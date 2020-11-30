@@ -3,15 +3,46 @@ footer {
     background: $n-red;
     border-radius: 2rem 2rem 0 0;
     margin-top: -2rem;
+    padding-bottom: 3rem;
+
+    @include md {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .footer__mapcontainer {
+        display: none;
+
+        @include md {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+
+        &__googlemap {
+            border-radius: 0 2rem 0 0;
+        }
+    }
 }
 
 address {
-    padding: 1rem;
+    width: 90%;
+    padding-left: 1rem;
     white-space: pre-line;
 
+    @include md {
+        padding-left: 3rem;
+        width: 50%;
+    }
+
     hr {
-        width: 100%;
+        width: 95%;
         border: 1px solid white;
         margin: 1.5rem 0;
+
+        @include md {
+            width: 80%;
+        }
     }
 }

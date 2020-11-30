@@ -1,6 +1,6 @@
 .intro {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     min-height: 35rem;
     display: flex;
     flex-direction: column;
@@ -9,8 +9,27 @@
     background-color: $primary-blue;
     color: white;
 
+    @include md {
+        padding-top: 3rem;
+    }
+
+    @include lg {
+        display: none;
+    }
+
+    h1 {
+        @include sm {
+            margin-top: 1rem;
+        }
+    }
+    
+
     img {
         width: 18rem;
         box-sizing: border-box;
+
+        @include md {
+            width: 22rem;
+        }
     }
 }

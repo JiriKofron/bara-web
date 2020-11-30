@@ -3,6 +3,14 @@
     padding: 0 1rem;
     white-space: pre-line;
 
+    @include md {
+        margin-bottom: -5rem;
+    }
+
+    @include lg {
+        order: 5;
+    }
+
     h1 {
         padding-top: 3rem;
     }
@@ -26,6 +34,10 @@
             color: $n-darkest-blue;
             background: rgba($n-gold, 0.2);
             border-radius: 2rem;
+
+            @include sm {
+                width: 25rem;
+            }
 
             span {
                 display: inline-block;

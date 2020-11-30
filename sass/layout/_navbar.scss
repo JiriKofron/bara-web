@@ -18,13 +18,41 @@
     height: 2rem;
     // border: 1px solid red;
 
-    &__nav, &__logo {
+    @include lg {
+        background-color: $n-red;
+        justify-content: space-between;
+        height: 4rem;
+        padding: .3rem 1rem;
+    }
+
+    &__nav {
         display: none;
+
+        @include lg {
+            display: flex;
+            align-items: center;
+            
+        }
+    }
+
+    &__menu {
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        &__nav {
+            margin: 0 .5rem;
+        }
     }
 
     &__ham {
         z-index: 1000;
         margin-right: .7rem;
+
+        @include lg {
+            display: none;
+        }
     }
 
     &__ham:hover {

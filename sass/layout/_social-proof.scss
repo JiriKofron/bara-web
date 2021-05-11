@@ -4,7 +4,7 @@
   background: linear-gradient(to bottom, white 30%, $primary-blue 30%);
 
   @include sm {
-    height: 51rem;
+    height: 44rem;
   }
 
   @include lg {
@@ -20,7 +20,7 @@
   height: 40rem;
 
   @include sm {
-    height: 49rem;
+    height: 46rem;
   }
 }
 
@@ -58,7 +58,7 @@
     width: 90%;
 
     @include sm {
-      width: 60%;
+      width: 70%;
     }
 
     @include md {

@@ -339,7 +339,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  width: 100%; }
   .service-cards__text {
     display: flex;
     flex-direction: column;
@@ -350,10 +351,10 @@ main {
     margin: 1rem;
     border-radius: 2rem;
     box-shadow: 0px 0px 10px 5px #d8f2ff; }
-  @media (min-width: 780px) {
-    .service-cards {
-      width: 20rem;
-      height: 15rem; } }
+    @media (min-width: 780px) {
+      .service-cards__text {
+        width: 20rem;
+        height: 15rem; } }
   @media (min-width: 780px) {
     .service-cards {
       flex-direction: row;
@@ -373,7 +374,7 @@ main {
   background: linear-gradient(to bottom, white 30%, #328FE0 30%); }
   @media (min-width: 470px) {
     .carousel-container {
-      height: 51rem; } }
+      height: 44rem; } }
   @media (min-width: 1020px) {
     .carousel-container {
       order: 3; } }
@@ -384,7 +385,7 @@ main {
   height: 40rem; }
   @media (min-width: 470px) {
     .main-carousel {
-      height: 49rem; } }
+      height: 46rem; } }
 
 .carousel-cell {
   /*border: 1px solid green;*/
@@ -412,7 +413,7 @@ main {
     width: 90%; }
     @media (min-width: 470px) {
       .carousel-cell .review-text {
-        width: 60%; } }
+        width: 70%; } }
     @media (min-width: 780px) {
       .carousel-cell .review-text {
         width: 90%; } }

@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  width: 100%;
 
   &__text {
     display: flex;
@@ -16,11 +17,11 @@
     margin: 1rem;
     border-radius: 2rem;
     box-shadow: 0px 0px 10px 5px #d8f2ff;
-  }
 
-  @include md {
-    width: 20rem;
-    height: 15rem;
+    @include md {
+      width: 20rem;
+      height: 15rem;
+    }
   }
 
   @include md {

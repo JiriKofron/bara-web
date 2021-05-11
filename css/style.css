@@ -35,7 +35,8 @@ body {
   font-weight: 100;
   color: white; }
 
-.navbar h1, .navbar h2 {
+.navbar h1,
+.navbar h2 {
   color: white;
   font-family: "Raleway", sans-serif;
   font-weight: 200; }
@@ -98,7 +99,7 @@ body {
 .service-text__text {
   font-family: "Monserrat", serif;
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.5;
   font-weight: 300;
   color: #1A1D61; }
   .service-text__text--b {
@@ -109,8 +110,10 @@ body {
   font-family: "Monserrat", serif;
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.4; }
+  line-height: 1.5; }
   .service-cards a {
+    color: #1A1D61; }
+  .service-cards__text {
     color: #1A1D61; }
 
 .review-name {
@@ -121,11 +124,13 @@ body {
       font-size: 3.7rem; } }
 
 .review-text {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
   font-family: "Monserrat", serif; }
   @media (min-width: 470px) {
     .review-text {
-      font-size: 1.4rem; } }
+      font-size: 1.4rem;
+      line-height: 1.4; } }
 
 .contact {
   color: #E0BA1B; }
@@ -140,7 +145,8 @@ body {
 
 .kodex__text p {
   color: white;
-  font-family: "Monserrat", serif; }
+  font-family: "Monserrat", serif;
+  line-height: 1.5; }
 
 .about {
   color: white; }
@@ -148,24 +154,23 @@ body {
     font-family: "Monserrat", serif;
     color: #1A1D61;
     font-size: 1.4rem;
-    line-height: 1.4;
+    line-height: 1.5;
     color: white; }
 
 .cenik h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 200;
-  font-size: 2rem; }
+  font-size: 2.5rem; }
 
-.cenik span {
-  font-family: "Raleway", sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700; }
-
-.cenik li {
-  font-size: 1.4rem; }
-  .cenik li p {
+.cenik__item {
+  font-size: 1.8rem; }
+  .cenik__item__price {
+    font-family: "Raleway", sans-serif;
+    font-size: 3rem;
+    font-weight: 700; }
+  .cenik__item p {
     font-family: "Monserrat", serif;
-    font-size: 1.2rem; }
+    font-size: 1.4rem; }
 
 address {
   color: white;
@@ -193,7 +198,7 @@ hr {
 
 .headline {
   text-align: center;
-  margin-bottom: .5rem; }
+  margin-bottom: 0.5rem; }
 
 main {
   width: 100%;
@@ -201,7 +206,8 @@ main {
   flex-direction: column;
   align-items: center; }
   @media (min-width: 1020px) {
-    main .waves-down, main .waves-up {
+    main .waves-down,
+    main .waves-up {
       display: none; } }
 
 .btn {
@@ -213,7 +219,7 @@ main {
   cursor: pointer; }
 
 .navbar {
-  display: flex;
+  display: none;
   position: fixed;
   justify-content: flex-end;
   top: 0;
@@ -226,7 +232,7 @@ main {
       background-color: #E05B12;
       justify-content: space-between;
       height: 4rem;
-      padding: .3rem 1rem; } }
+      padding: 0.3rem 1rem; } }
   .navbar__nav {
     display: none; }
     @media (min-width: 1020px) {
@@ -239,10 +245,10 @@ main {
     align-items: center;
     justify-content: space-evenly; }
     .navbar__menu__nav {
-      margin: 0 .5rem; }
+      margin: 0 0.5rem; }
   .navbar__ham {
     z-index: 1000;
-    margin-right: .7rem; }
+    margin-right: 0.7rem; }
     @media (min-width: 1020px) {
       .navbar__ham {
         display: none; } }
@@ -267,12 +273,12 @@ main {
     position: absolute;
     top: 1rem;
     right: 0;
-    margin-right: .7rem; }
+    margin-right: 0.7rem; }
   .sm-menu__close:hover {
     scale: 1.1; }
 
 .sm-menu-enter-active {
-  transition: all .3s; }
+  transition: all 0.3s; }
 
 .sm-menu-enter {
   transform: translate(100%);
@@ -334,15 +340,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; }
-  @media (min-width: 780px) {
-    .service-cards {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center; } }
-  @media (min-width: 1020px) {
-    .service-cards {
-      order: 1; } }
-  .service-cards li {
+  .service-cards__text {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -351,11 +349,19 @@ main {
     padding-bottom: 1.5rem;
     margin: 1rem;
     border-radius: 2rem;
-    box-shadow: 0px 0px 10px 5px #D8F2FF; }
-    @media (min-width: 780px) {
-      .service-cards li {
-        width: 20rem;
-        height: 15rem; } }
+    box-shadow: 0px 0px 10px 5px #d8f2ff; }
+  @media (min-width: 780px) {
+    .service-cards {
+      width: 20rem;
+      height: 15rem; } }
+  @media (min-width: 780px) {
+    .service-cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center; } }
+  @media (min-width: 1020px) {
+    .service-cards {
+      order: 1; } }
   .service-cards img {
     width: 9rem;
     padding-top: 1rem;
@@ -363,11 +369,11 @@ main {
 
 .carousel-container {
   width: 100%;
-  height: 44rem;
+  height: 51rem;
   background: linear-gradient(to bottom, white 30%, #328FE0 30%); }
   @media (min-width: 470px) {
     .carousel-container {
-      height: 47rem; } }
+      height: 51rem; } }
   @media (min-width: 1020px) {
     .carousel-container {
       order: 3; } }
@@ -375,22 +381,22 @@ main {
     margin-bottom: 3rem; }
 
 .main-carousel {
-  height: 34rem; }
+  height: 40rem; }
   @media (min-width: 470px) {
     .main-carousel {
-      height: 37rem; } }
+      height: 49rem; } }
 
 .carousel-cell {
   /*border: 1px solid green;*/
   width: 85%;
-  height: 34rem;
+  height: 43rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white; }
   @media (min-width: 470px) {
     .carousel-cell {
-      height: 37rem; } }
+      height: 48rem; } }
   @media (min-width: 780px) {
     .carousel-cell {
       width: 33%; } }
@@ -399,7 +405,7 @@ main {
     /*border: 1px solid red;*/ }
   .carousel-cell .review-name {
     margin: 0;
-    margin-top: .5rem; }
+    margin-top: 0.5rem; }
   .carousel-cell .review-text {
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -412,7 +418,8 @@ main {
         width: 90%; } }
 
 @media (min-width: 780px) {
-  .flickity-prev-next-button, .flickity-page-dots {
+  .flickity-prev-next-button,
+  .flickity-page-dots {
     display: none; } }
 
 .contact {
@@ -509,8 +516,8 @@ main {
       order: 5; } }
   .cenik h1 {
     padding-top: 3rem; }
-  .cenik h3 {
-    text-align: center; }
+  .cenik hr {
+    margin-bottom: 0; }
   .cenik ul {
     list-style: none;
     margin: 1rem auto;
@@ -522,9 +529,7 @@ main {
       padding: 1rem 1rem;
       margin: 1rem auto;
       text-align: center;
-      color: #1A1D61;
-      background: rgba(224, 186, 27, 0.2);
-      border-radius: 2rem; }
+      color: #E0BA1B; }
       @media (min-width: 470px) {
         .cenik ul li {
           width: 25rem; } }
@@ -532,10 +537,13 @@ main {
         display: inline-block;
         width: 100%;
         text-align: center;
-        margin: 1rem 0; }
+        margin: 2rem 0; }
       .cenik ul li p {
-        margin: 1rem auto;
+        margin: 2rem auto;
         text-align: left; }
+    .cenik ul hr {
+      width: 70%;
+      color: #E0BA1B; }
 
 footer {
   width: 100%;

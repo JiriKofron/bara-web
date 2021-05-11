@@ -15,15 +15,15 @@
 }
 
 .navbar {
-
-  h1, h2 {
+  h1,
+  h2 {
     color: white;
     font-family: $raleway;
     font-weight: 200;
   }
 
   h1 {
-    font-size: 2rem;    
+    font-size: 2rem;
   }
 
   h2 {
@@ -31,7 +31,6 @@
   }
 
   &__menu {
-
     &__nav {
       font-family: $raleway;
       font-size: 1.3rem;
@@ -39,7 +38,6 @@
       font-weight: 200;
     }
   }
-  
 }
 
 .intro {
@@ -107,7 +105,7 @@
   &__text {
     font-family: $monserrat;
     font-size: 1.6rem;
-    line-height: 1.4;
+    line-height: 1.5;
     font-weight: 300;
     color: $n-darkest-blue;
 
@@ -122,9 +120,13 @@
   font-family: $monserrat;
   font-size: 1.4rem;
   font-weight: 300;
-  line-height: 1.4;
+  line-height: 1.5;
 
   a {
+    color: $n-darkest-blue;
+  }
+
+  &__text {
     color: $n-darkest-blue;
   }
 }
@@ -139,11 +141,13 @@
 }
 
 .review-text {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4;
   font-family: $monserrat;
 
   @include sm {
     font-size: 1.4rem;
+    line-height: 1.4;
   }
 }
 
@@ -168,6 +172,7 @@
   &__text p {
     color: white;
     font-family: $monserrat;
+    line-height: 1.5;
   }
 }
 
@@ -178,7 +183,7 @@
     font-family: $monserrat;
     color: $n-darkest-blue;
     font-size: 1.4rem;
-    line-height: 1.4;
+    line-height: 1.5;
     color: white;
   }
 }
@@ -187,21 +192,21 @@
   h3 {
     font-family: $raleway;
     font-weight: 200;
-    font-size: 2rem;
-  }
-
-  span {
-    font-family: $raleway;
     font-size: 2.5rem;
-    font-weight: 700;
   }
 
-  li {
-    font-size: 1.4rem;
+  &__item {
+    font-size: 1.8rem;
+
+    &__price {
+      font-family: $raleway;
+      font-size: 3rem;
+      font-weight: 700;
+    }
 
     p {
       font-family: $monserrat;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 }

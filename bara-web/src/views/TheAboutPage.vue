@@ -2,7 +2,7 @@
 
 <script>
 export default {
-  name: "ThePriceList",
+  name: "TheAboutPage",
 };
 </script>
 

@@ -1,21 +1,69 @@
 <template>
   <div class="collapse navbar-collapse navbar__ham" id="navbarToggle">
     <div class="navbar-nav me-auto navbar__ham__links">
-      <a class="nav-link nav-item" href="#"> Služby </a>
-      <a class="nav-link nav-item" href="#"> Ceník </a>
-      <a class="nav-link nav-item" href="#"> Kodex </a>
-      <a class="nav-link nav-item" href="#"> Média </a>
-      <a class="nav-link nav-item" href="#"> O mně </a>
-      <router-link to="contact">
-        <button
-          class="btn btn-outline-danger nav-item btn-lg navbar__contact mt-3"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarToggle"
-        >
-          Kontakt
-        </button>
-      </router-link>
+      <a
+        href="#"
+        class="nav-link nav-item"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggle"
+        @click="$router.push('/')"
+      >
+        Domu
+      </a>
+      <a
+        class="nav-link nav-item"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggle"
+        href="#"
+        @click="$router.push('/#services')"
+      >
+        Služby
+      </a>
+      <a
+        class="nav-link nav-item"
+        href="#"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggle"
+        @click="$router.push('/pricelist')"
+      >
+        Ceník
+      </a>
+      <a
+        class="nav-link nav-item"
+        href="#"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggle"
+        @click="$router.push('/#codex')"
+      >
+        Kodex
+      </a>
+      <a
+        class="nav-link nav-item"
+        href="#"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggle"
+        @click="$router.push('/media')"
+      >
+        Média
+      </a>
+      <a
+        class="nav-link nav-item"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggle"
+        href="#"
+        @click="$router.push('/#about')"
+      >
+        O mně
+      </a>
+      <button
+        class="btn btn-outline-danger nav-item btn-lg navbar__contact mt-3"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarToggle"
+        @click="$router.push('/contact')"
+      >
+        Kontakt
+      </button>
       <button
         type="button"
         class="close btn-close btn-lg"

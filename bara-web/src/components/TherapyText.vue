@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="services">
     <div
       class="d-flex flex-column align-items-center justify-content-center px-5 mt-5"
     >

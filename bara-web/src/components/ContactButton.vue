@@ -24,6 +24,11 @@ export default {
   width: 90%;
   max-width: 30rem;
   margin: 1rem auto;
+
+  @include lg {
+    font-size: 1.4rem;
+    max-width: 15rem;
+  }
 }
 
 .btn-danger {

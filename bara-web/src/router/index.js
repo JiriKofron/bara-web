@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import TheMobileView from "@/views/TheMobileView.vue";
+import TheHome from "@/views/TheHome.vue";
 import ContactPage from "@/views/ContactPage.vue";
 import TheMediaPage from "@/views/TheMediaPage.vue";
 import ThePriceList from "@/views/ThePriceList.vue";
@@ -10,7 +10,7 @@ import TheAboutPage from "@/views/TheAboutPage.vue";
 // Each route should map to a component.
 // We'll talk about nested routes later.
 const routes = [
-  { path: "/", name: "app", component: TheMobileView },
+  { path: "/", name: "app", component: TheHome },
   { path: "/contact", name: "contact", component: ContactPage },
   { path: "/media", name: "media", component: TheMediaPage },
   { path: "/pricelist", name: "pricelist", component: ThePriceList },

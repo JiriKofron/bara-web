@@ -82,6 +82,7 @@ export default {
     font-font: $header-text;
     font-size: 2rem;
     color: $contract-red;
+    text-decoration: underline;
   }
 }
 

@@ -77,7 +77,13 @@
     </div>
   </div>
   <nav class="navbar fixed-top navbar-light flex-nowrap mx-4">
-    <a class="navbar-brand px-3 pt-2 text-wrap" href="#">Barbora Pšenicová</a>
+    <a
+      class="navbar-brand px-3 pt-2 text-wrap"
+      href="#"
+      @click="$router.push('/')"
+      >Barbora Pšenicová
+    </a>
+
     <button
       class="navbar-toggler d-md-none me-2"
       type="button"
@@ -91,12 +97,27 @@
     </button>
 
     <div class="navbar-nav d-none d-md-flex navbar__expanded">
-      <a class="nav-link nav-item" href="#"> Služby </a>
-      <a class="nav-link nav-item" href="#"> Ceník </a>
-      <a class="nav-link nav-item" href="#"> Kodex </a>
-      <a class="nav-link nav-item" href="#"> O mně </a>
+      <a class="nav-link nav-item" href="#" @click="$router.push('/#services')">
+        Služby
+      </a>
+      <a class="nav-link nav-item" href="#" @click="$router.push('/pricelist')">
+        Ceník
+      </a>
+      <a class="nav-link nav-item" href="#" @click="$router.push('/#codex')">
+        Kodex
+      </a>
+      <a class="nav-link nav-item" href="#" @click="$router.push('/media')">
+        Média
+      </a>
+      <a class="nav-link nav-item" href="#" @click="$router.push('/#about')">
+        O mně
+      </a>
       <router-link to="contact" class="nav-item">
-        <button class="btn btn-outline-danger" type="button" @click="clicked">
+        <button
+          class="btn btn-outline-danger"
+          type="button"
+          @click="$router.push('/contact')"
+        >
           Kontakt
         </button>
       </router-link>
@@ -107,19 +128,13 @@
 <script>
 export default {
   name: "TheNavbar",
-  data() {
-    return {};
-  },
-  methods: {
-    clicked() {
-      console.log("clicked");
-    },
-  },
 };
 </script>
 
 <style scoped lang="scss">
 .navbar {
+  max-width: 1400px;
+
   &__ham {
     position: fixed;
     top: 0;

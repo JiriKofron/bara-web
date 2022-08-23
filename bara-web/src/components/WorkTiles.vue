@@ -50,6 +50,11 @@ export default {
   align-items: center;
   justify-content: center;
 
+  @include lg {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
   &__icon {
     color: white;
     vertical-align: middle;
@@ -70,6 +75,15 @@ export default {
     background-color: $dark-blue;
     padding: 1rem;
 
+    @include sm {
+      justify-content: space-evenly;
+    }
+
+    @include lg {
+      max-width: 15rem;
+      max-height: 15rem;
+    }
+
     .card-body {
       color: white;
       font-family: $header-text;
@@ -77,6 +91,10 @@ export default {
       h3 {
         font-size: 1.3rem;
         font-weight: 700;
+      }
+
+      @include sm {
+        flex: 0 0 auto;
       }
     }
   }

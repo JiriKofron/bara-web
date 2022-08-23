@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="hero">
-      <img class="hero__img" src="/D3P_portrety_2021_web-16-v6.webp">
+      <img class="hero__img" src="/D3P_portrety_2021_web-16-v6.webp" />
       <div class="hero__headline">
         <h1>
           terapeutka <span class="hero__headline--dark">konzultantka</span>
@@ -10,7 +10,8 @@
 
       <div class="hero__text my-3">
         <h2 class="text-center">
-          Hledáte ve své situaci oporu, pochopení a respekt? Velmi ráda vám je nabídnu.
+          Hledáte ve své situaci oporu, pochopení a respekt? Velmi ráda vám je
+          nabídnu.
         </h2>
       </div>
     </div>
@@ -19,8 +20,8 @@
 
 <script>
 export default {
-  name: "TheIntro"
-}
+  name: "TheIntro",
+};
 </script>
 
 <style lang="scss" scoped>
@@ -31,7 +32,6 @@ section {
   position: relative;
   display: flex;
   justify-content: center;
-
 }
 
 .hero {
@@ -66,16 +66,12 @@ section {
       text-align: center;
       font-size: 2.5rem;
       line-height: 3.5rem;
-
-
     }
   }
 
   &__text {
-  font-family: $body-text;
+    font-family: $body-text;
     color: $darkest-blue;
+  }
 }
-}
-
-
 </style>

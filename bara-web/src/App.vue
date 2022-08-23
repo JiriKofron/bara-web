@@ -2,8 +2,8 @@
   <main class="container-fluid">
     <TheNavbar />
     <router-view></router-view>
-    <TheFooter />
   </main>
+  <TheFooter />
 </template>
 
 <script>
@@ -22,6 +22,17 @@ export default {
 </script>
 
 <style lang="scss">
+#app {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
 main {
   margin: 0;
   padding: 0 !important;

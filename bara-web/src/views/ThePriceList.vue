@@ -32,6 +32,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
 h3 {
   font-family: $header-text;
   font-size: 1.4rem;

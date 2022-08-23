@@ -42,6 +42,7 @@
             width="100%"
             src="https://anchor.fm/mozaikavzdelavani/embed/episodes/14-S-Barborou-Penicovou-o-duevnm-zdrav-a-projektu-Nevypus-dui-e1koipm/a-a873rs7"
             allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            onload="resizeToContent(this)"
           ></iframe>
         </div>
       </div>
@@ -75,6 +76,11 @@
 <script>
 export default {
   name: "TheMediaPage",
+  methods: {
+    resizeToContent(iframe) {
+      iframe.height = iframe.contentWindow.document.body.scrollHeight;
+    },
+  },
 };
 </script>
 
@@ -95,11 +101,13 @@ section {
 
     iframe {
       margin: 1rem auto;
+      flex-grow: 1;
     }
 
     .card {
       border: 1px solid $contract-red;
       margin: 1rem auto;
+      max-width: 35rem;
     }
 
     .card-header {
@@ -118,6 +126,19 @@ section {
       font-family: $body-text;
       color: $dark-blue;
       font-size: 1.2rem;
+    }
+
+    &__body {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @include sm {
+    .media__video {
+      iframe {
+        height: 15rem;
+      }
     }
   }
 }

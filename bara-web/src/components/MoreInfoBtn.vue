@@ -13,6 +13,7 @@ export default {
 <style lang="scss" scoped>
 .btn__more {
   width: 70%;
+  max-width: 20rem;
   padding: 1rem 2rem;
   font-size: 1.5rem;
   font-weight: 700;

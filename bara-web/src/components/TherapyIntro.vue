@@ -1,7 +1,7 @@
 <template>
   <section id="about">
     <div
-      class="d-flex flex-column align-items-center justify-content-center px-5 mt-5"
+      class="d-flex flex-column align-items-center justify-content-center px-5 mt-5 intro__text"
     >
       <p class="text-left">
         Na terapii můžete přijít s různými potížemi, se kterými si nevíte rady a
@@ -34,10 +34,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.intro__text {
+  display: flex;
+}
+
 p {
   font-family: $body-text;
   color: $darkest-blue;
   font-size: 1.4rem;
   margin: 1rem auto;
+  max-width: 40rem;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <footer class="card">
-    <div class="card-body">
+    <div class="card-body container">
       <h3 class="card-header">Adresa</h3>
       <hr class="mb-1" />
       <address class="card-subtitle">
@@ -10,11 +10,11 @@
       </address>
       <span class="card-text">IČO: 06753493</span>
     </div>
+    <div class="copyright container-fluid">
+      <a href="#" @click="$router.push('/')">www.psenicova.cz</a>
+      <span>&copy Copyright {{ year }}</span>
+    </div>
   </footer>
-  <div class="copyright container">
-    <a href="#" @click="$router.push('/')">www.psenicova.cz</a>
-    <span>&copy Copyright {{ year }}</span>
-  </div>
 </template>
 
 <script>
@@ -30,15 +30,19 @@ export default {
 
 <style lang="scss" scoped>
 footer {
+  margin: 0;
+  padding: 0;
+  width: 100%;
   background-color: $dark-blue;
   font-family: $header-text;
   font-size: 0.85rem;
   color: white;
-  padding: 1rem;
 }
 
 .copyright {
   width: 100%;
+  padding: 0 1rem;
+  margin: 0;
   height: 2rem;
   font-size: 0.9rem;
   font-family: $body-text;

@@ -123,6 +123,16 @@ export default {
 <style lang="scss" scoped>
 .contact {
   margin-top: 6rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   &__details {
     margin-top: 1rem;
@@ -136,6 +146,11 @@ export default {
     &__detail {
       width: 100%;
       position: relative;
+      max-width: 20rem;
+
+      &__circle {
+        max-width: 20rem;
+      }
 
       &__icon {
         position: absolute;
@@ -171,12 +186,17 @@ export default {
 
 .contact-form {
   width: 100%;
+  max-width: 30rem;
   margin-top: 3rem;
   padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: rgba($contract-red, 0.9);
+
+  @include md {
+    margin-right: 2rem;
+  }
 
   .form-label {
     color: white;

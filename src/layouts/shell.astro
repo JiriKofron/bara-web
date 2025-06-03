@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/fonts.css';
 import MainNavigation from '../components/MainNavigation.astro';
+import capLogo from '../images/cap-logo-barevne.png';
 
 interface Props {
 	title: string;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const currentYear = new Date().getFullYear();
 ---
 
 <html lang="cs">
@@ -44,12 +46,32 @@ const { title, description } = Astro.props;
 		<main class="flex flex-col items-center justify-center w-full min-h-[80dvh]">
 			<slot />
 		</main>
-        <footer class="flex w-full text-darkest-blue px-6 py-4">
-            <ul class="flex items-center justify-center gap-8 md:gap-12 w-full">
-                <li class="font-cinzel text-lg md:text-xl">
-                    <a href="/">Barbora Pšenicová</a>
-                </li>
-            </ul>
+        <footer class="w-full flex flex-col md:flex-row justify-between items-start gap-4 w-full bg-darkest-blue text-white px-6 py-4 font-cinzel text-sm">
+            <nav class="flex flex-col gap-2">
+                <a class="nav-link nav-item" href="/contact">
+                  Kontakt
+                </a>
+                <a class="nav-link nav-item" href="/media">
+                  Média
+                </a>
+                <a class="nav-link nav-item" href="/about">
+                  O mně
+                </a>
+              </nav>
+        
+            <div class="flex flex-col gap-2">
+              <span>Jsem řádnou členkou</span>
+              <img src={capLogo.src} alt="Česká asociace pro psychoterapy" width="200">
+            </div>
+
+              <div class="flex flex-col gap-2">
+                <address>
+                  Václavské náměstí 837/11, Praha 1, 110 00 (mezi Kobe a McDonalds)
+                </address>
+                <span>IČO: 06753493</span>
+                <a href="/">www.psenicova.cz</a>
+                <span>&copy; Copyright {currentYear}</span>
+              </div>
         </footer>
 	</body>
 </html>

@@ -1,19 +1,14 @@
 {
-  "name": "2.0",
-  "version": "1.0.0",
-  "description": "Update Bara web",
-  "main": "index.js",
+  "name": "bara-web",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "author": "Jiri Kofron",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "nodemailer": "^6.4.10"
-  },
-  "devDependencies": {
-    "node-sass": "^4.14.1"
+    "astro": "^5.8.1"
   }
 }

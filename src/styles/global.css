@@ -1,1 +1,11 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --font-cinzel: 'Cinzel', serif;
+  --font-epilogue: 'Epilogue', sans-serif;
+  --color-darkest-blue: #1d3557;
+  --color-dark-blue: #457b9d;
+  --color-light-blue: #a8dadc;
+  --color-background-blue: #f1faee;
+  --color-contract-red: #e63946;
+}

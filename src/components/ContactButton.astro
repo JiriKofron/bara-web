@@ -2,6 +2,6 @@
 const { label, to, classList } = Astro.props;
 ---
 
-<a href={to} class={`bg-contract-red text-white px-4 py-2 text-lg rounded-md w-fit ${classList}`}>
+<a href={to} class={`bg-contract-red text-white px-4 py-2 text-lg md:text-2xl rounded-md w-fit ${classList} hover:scale-105 transition-all duration-300`}>
     {label}
 </a>

@@ -1,0 +1,55 @@
+---
+import '../styles/global.css';
+import '../styles/fonts.css';
+import MainNavigation from '../components/MainNavigation.astro';
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang="cs">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/therapy_1_50.webp" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Primary Meta Tags -->
+		<title>{title}</title>
+		<meta name="title" content={title}>
+		<meta name="description" content={description}>
+	
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://psenicova.cz/">
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+	
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://psenicova.cz/">
+		<meta property="twitter:title" content={title}>
+		<meta property="twitter:description" content={description}>
+	
+		<script src="https://kit.fontawesome.com/264d3a40e4.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+        <header>
+            <MainNavigation />
+        </header>
+		<main class="flex flex-col items-center justify-center w-full min-h-[80dvh]">
+			<slot />
+		</main>
+        <footer class="flex w-full text-darkest-blue px-6 py-4">
+            <ul class="flex items-center justify-center gap-8 md:gap-12 w-full">
+                <li class="font-cinzel text-lg md:text-xl">
+                    <a href="/">Barbora Pšenicová</a>
+                </li>
+            </ul>
+        </footer>
+	</body>
+</html>

@@ -15,7 +15,7 @@ const description = 'Hledáte ve své situaci oporu, pochopení a respekt? Velmi
 <Shell title={title} description={description}>
 	<section class="hero flex flex-col items-center justify-center w-full max-w-7xl md:mx-auto">
 		<div class="relative overflow-hidden md:overflow-visible flex flex-col md:flex-row-reverse items-center md:items-start justify-center w-full py-4 sm:py-6 md:p-8 md:gap-8 xl:gap-12">
-			<div class="breathing-glow w-[500px] h-[500px] md:w-[600px] md:h-[400px] lg:w-[900px] lg:h-[600px] top-6/10 left-5/10 md:top-6/10 md:left-4/10 lg:top-6/10 lg:left-4/10" aria-hidden="true" />
+			<div class="breathing-glow w-[500px] h-[500px] md:w-[600px] md:h-[400px] lg:w-[900px] lg:h-[600px] top-6/10 left-5/10 md:top-6/10 md:left-4/10 lg:top-6/10 lg:left-6/10" aria-hidden="true" />
 			<article class="z-10 flex flex-col justify-center sm:gap-2 md:gap-4 lg:gap-8 text-darkest-blue font-cinzel md:mt-24 lg:mt-48">
 				<h1 class="text-3xl sm:text-5xl lg:text-6xl xl:text-8xl">Barbora Pšenicová</h1>
 				<div class="text-lg sm:text-2xl lg:text-3xl">Terapeutka | konzultantka</div>
@@ -34,6 +34,13 @@ const description = 'Hledáte ve své situaci oporu, pochopení a respekt? Velmi
 				alt="Barbora Pšenicová"
 				class="block md:hidden sm:w-8/12 z-10"
 			/>
+
+			<h2 class="flex md:hidden text-lg opacity-70 font-normal font-cinzel p-4 z-10">
+				Hledáte ve své situaci oporu, pochopení a respekt? Velmi ráda vám je
+				nabídnu.
+			  </h2>
+
+			<ContactButton label="Chci konzultaci" to="/contact" classList="flex md:hidden z-10" />
 
 			<img 
 				src={heroImageBodyLarge.src}

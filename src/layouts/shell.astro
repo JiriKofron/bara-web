@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import '../styles/fonts.css';
 import MainNavigation from '../components/MainNavigation.astro';
-import capLogo from '../images/cap-logo-barevne.png';
+import capLogo from '../images/cap-logo-barevne.webp';
 
 interface Props {
 	title: string;
@@ -36,8 +36,6 @@ const currentYear = new Date().getFullYear();
 		<meta property="twitter:url" content="https://psenicova.cz/">
 		<meta property="twitter:title" content={title}>
 		<meta property="twitter:description" content={description}>
-	
-		<script src="https://kit.fontawesome.com/264d3a40e4.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
         <header>

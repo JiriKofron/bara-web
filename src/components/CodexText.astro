@@ -1,0 +1,46 @@
+<div class="relative z-20 flex w-full justify-center overflow-hidden">
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    class="absolute inset-0 h-full w-full scale-110 object-cover opacity-50 blur-sm"
+    id="background-video"
+  >
+    <source src="/images/Therapy_small.mp4" type="video/mp4" />
+  </video>
+  <div
+    class="relative z-10 flex max-w-2xl flex-col items-center justify-center gap-6 p-8 font-epilogue text-lg leading-relaxed text-white md:p-12 lg:p-16"
+  >
+    <p>
+      Konzultace se domlouvá <strong>předem</strong>, ideálně
+      <strong>e-mailem</strong>, na konkrétní hodinu dle našich vzájemných možností (i ve večerních
+      hodinách).
+    </p>
+    <p>
+      Konzultace jsou placené. Konzultace
+      <strong>nemohou být hrazené zdravotní pojišťovnou</strong>. Jedna konzultace trvá 50 minut.
+      Hradit je možné pouze bezhotovostně z bankovního účtu. Své služby fakturuji.
+    </p>
+    <p>
+      Zrušení konzultace je možné
+      <strong>bezplatně 48 hodin před </strong> domluvenou konzultací.
+    </p>
+    <p>
+      Velmi důležitá je důvěra a samozřejmě má <strong>mlčenlivost</strong>. Vše, co na společných
+      setkáních řeknete, považuji za důvěrné.
+    </p>
+    <p>
+      Frekvence konzultací a jejich podoba je domlouvána během společně strávené doby. <strong
+        >Ukončení konzultací je možné kdykoli</strong
+      >, záleží na Vás, Vašich možnostech a potřebách.
+    </p>
+  </div>
+</div>
+
+<script>
+  const video = document.getElementById('background-video') as HTMLVideoElement;
+  if (video) {
+    video.playbackRate = 0.7;
+  }
+</script>

@@ -10,6 +10,11 @@ export default defineConfig({
 
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        '@': '/src',
+      },
+    },
   },
 
   adapter: vercel(),

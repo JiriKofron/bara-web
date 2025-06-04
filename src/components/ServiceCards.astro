@@ -1,0 +1,53 @@
+---
+const cards = [
+  {
+    id: 0,
+    title: '15 let s lidmi v náročných situacích',
+    iconName: 'hand-heart',
+  },
+  {
+    id: 1,
+    title: '6 let terapeutické praxe',
+    iconName: 'first-aid',
+  },
+  {
+    id: 2,
+    title: '2000+ sezení s klienty',
+    iconName: 'armchair',
+  },
+  {
+    id: 3,
+    title: '900+ hodin vzděvání',
+    iconName: 'book',
+  },
+];
+
+// Dynamically import all icons
+const iconComponents = await Promise.all(
+  cards.map(async card => {
+    const module = await import(`./icons/${card.iconName}.astro`);
+    return {
+      title: card.title,
+      component: module.default,
+    };
+  })
+);
+---
+
+<ul
+  class="flex w-full flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap md:gap-12"
+>
+  {
+    iconComponents.map(({ title, component: Icon }) => (
+      <li class="flex h-full w-full flex-col items-center justify-center gap-4 rounded-lg bg-dark-blue p-6 text-darkest-blue transition-colors hover:text-contract-red sm:h-64 sm:w-64">
+        <div class="h-24 w-24 md:h-32 md:w-32">
+          <Icon class="h-full w-full fill-white" />
+        </div>
+
+        <span class="text-center font-cinzel text-lg font-semibold text-white md:text-xl">
+          {title}
+        </span>
+      </li>
+    ))
+  }
+</ul>

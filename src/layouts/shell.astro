@@ -1,12 +1,12 @@
 ---
-import '../styles/global.css';
-import '../styles/fonts.css';
-import MainNavigation from '../components/MainNavigation.astro';
-import capLogo from '../images/cap-logo-barevne.webp';
+import '@/styles/global.css';
+import '@/styles/fonts.css';
+import MainNavigation from '@/components/MainNavigation.astro';
+import capLogo from '@/images/cap-logo-barevne.webp';
 
 interface Props {
-	title: string;
-	description: string;
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props;
@@ -14,62 +14,96 @@ const currentYear = new Date().getFullYear();
 ---
 
 <html lang="cs">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/therapy_1_50.webp" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="generator" content={Astro.generator} />
-		
-		<!-- Primary Meta Tags -->
-		<title>{title}</title>
-		<meta name="title" content={title}>
-		<meta name="description" content={description}>
-	
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://psenicova.cz/">
-		<meta property="og:title" content={title}>
-		<meta property="og:description" content={description}>
-	
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:url" content="https://psenicova.cz/">
-		<meta property="twitter:title" content={title}>
-		<meta property="twitter:description" content={description}>
-	</head>
-	<body>
-        <header>
-            <MainNavigation />
-        </header>
-		<main class="flex flex-col items-center justify-center w-full min-h-[80dvh]">
-			<slot />
-		</main>
-        <footer class="w-full flex flex-col md:flex-row justify-between items-start gap-4 w-full bg-darkest-blue text-white px-6 py-4 font-cinzel text-sm">
-            <nav class="flex flex-col gap-2">
-                <a class="nav-link nav-item" href="/contact">
-                  Kontakt
-                </a>
-                <a class="nav-link nav-item" href="/media">
-                  Média
-                </a>
-                <a class="nav-link nav-item" href="/about">
-                  O mně
-                </a>
-              </nav>
-        
-            <div class="flex flex-col gap-2">
-              <span>Jsem řádnou členkou</span>
-              <img src={capLogo.src} alt="Česká asociace pro psychoterapy" width="200">
-            </div>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/therapy_1_50.webp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
 
-              <div class="flex flex-col gap-2">
-                <address>
-                  Václavské náměstí 837/11, Praha 1, 110 00 (mezi Kobe a McDonalds)
-                </address>
-                <span>IČO: 06753493</span>
-                <a href="/">www.psenicova.cz</a>
-                <span>&copy; Copyright {currentYear}</span>
-              </div>
-        </footer>
-	</body>
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://psenicova.cz/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://psenicova.cz/" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+  </head>
+  <body>
+    <header
+      id="main-header"
+      class="fixed top-0 right-0 left-0 z-50 transition-transform duration-300"
+    >
+      <MainNavigation />
+    </header>
+    <main
+      class="flex min-h-[80dvh] w-full flex-col items-center justify-center bg-background-blue pt-16"
+    >
+      <slot />
+    </main>
+    <footer
+      class="flex w-full flex-col items-start justify-between gap-4 bg-darkest-blue px-6 py-4 font-cinzel text-sm text-white md:flex-row"
+    >
+      <nav class="flex flex-col gap-2">
+        <a class="nav-link nav-item" href="/contact"> Kontakt </a>
+        <a class="nav-link nav-item" href="/media"> Média </a>
+        <a class="nav-link nav-item" href="/about"> O mně </a>
+      </nav>
+
+      <div class="flex flex-col gap-2">
+        <span>Jsem řádnou členkou</span>
+        <img src={capLogo.src} alt="Česká asociace pro psychoterapy" width="200" />
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <address>Václavské náměstí 837/11, Praha 1, 110 00 (mezi Kobe a McDonalds)</address>
+        <span>IČO: 06753493</span>
+        <a href="/">www.psenicova.cz</a>
+        <span>&copy; Copyright {currentYear}</span>
+      </div>
+    </footer>
+
+    <script>
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+      let scrollTimeout: ReturnType<typeof setTimeout> | undefined;
+      const header = document.getElementById('main-header');
+
+      function updateHeader() {
+        if (!header) return;
+
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY !== lastScrollY) {
+          header.style.transform = 'translateY(-100%)';
+
+          if (scrollTimeout) {
+            clearTimeout(scrollTimeout);
+          }
+
+          scrollTimeout = setTimeout(() => {
+            header.style.transform = 'translateY(0)';
+          }, 100);
+        }
+
+        lastScrollY = currentScrollY;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(updateHeader);
+          ticking = true;
+        }
+      });
+    </script>
+  </body>
 </html>

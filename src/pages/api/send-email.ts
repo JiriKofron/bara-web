@@ -1,8 +1,9 @@
 import { Resend } from 'resend';
+import type { APIRoute } from 'astro';
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
-export async function POST({ request }: { request: Request }) {
+export const POST: APIRoute = async ({ request }) => {
   try {
     const { name, email, message } = await request.json();
 
@@ -12,7 +13,7 @@ export async function POST({ request }: { request: Request }) {
 
     const data = await resend.emails.send({
       from: 'Contact Form <barbora@psenicova.cz>',
-      to: ['kofron.jiri@gmail.com'],
+      to: email,
       subject: `New Contact Form Submission from ${name}`,
       text: `
 Name: ${name}
@@ -30,4 +31,4 @@ Message: ${message}
       { status: 500 }
     );
   }
-}
+};

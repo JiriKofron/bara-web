@@ -1,4 +1,4 @@
-<form id="contact-form" class="max-w-lg mx-auto space-y-6">
+<form id="contact-form" class="mx-auto max-w-lg space-y-6">
   <div>
     <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
     <input
@@ -34,21 +34,21 @@
 
   <button
     type="submit"
-    class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+    class="flex w-full justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-none"
   >
     Send Message
   </button>
 
-  <div id="form-status" class="hidden mt-4 text-center"></div>
+  <div id="form-status" class="mt-4 hidden text-center"></div>
 </form>
 
 <script>
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
 
-  form?.addEventListener('submit', async (e) => {
+  form?.addEventListener('submit', async e => {
     e.preventDefault();
-    
+
     const formData = new FormData(e.target as HTMLFormElement);
     const data = {
       name: formData.get('name'),
@@ -83,4 +83,5 @@
       }
     }
   });
-</script> 
+</script>
+

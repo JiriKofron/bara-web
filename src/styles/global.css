@@ -6,6 +6,20 @@
   --color-darkest-blue: #1d3557;
   --color-dark-blue: #457b9d;
   --color-light-blue: #a8dadc;
-  --color-background-blue: #f1faee;
+  --color-background-blue: #f8f9fa; /* Slightly warmer, more eye-friendly white */
   --color-contract-red: #e63946;
+  --nav-gradient-start: rgba(248, 249, 250, 0.5); /* Slightly transparent version of background */
+  --nav-gradient-end: rgba(248, 249, 250, 0.2); /* More transparent for subtle effect */
+}
+
+/* Add styles for navigation background */
+#main-header {
+  background: linear-gradient(
+    to bottom,
+    var(--nav-gradient-start) 0%,
+    var(--nav-gradient-end) 60%,
+    transparent 90%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }

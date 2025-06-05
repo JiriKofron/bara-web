@@ -4,6 +4,8 @@ import '@/styles/fonts.css';
 import MainNavigation from '@/components/MainNavigation.astro';
 import capLogo from '@/images/cap-logo-barevne.webp';
 
+import SpeedInsights from '@vercel/speed-insights/astro';
+
 interface Props {
   title: string;
   description: string;
@@ -64,7 +66,7 @@ const currentYear = new Date().getFullYear();
       </div>
 
       <div class="flex flex-col gap-2">
-        <address>Václavské náměstí 837/11, Praha 1, 110 00 (mezi Kobe a McDonalds)</address>
+        <address>Václavské náměstí 837/11, Praha 1, 110 00 (vedle McDonalds)</address>
         <span>IČO: 06753493</span>
         <a href="/">www.psenicova.cz</a>
         <span>&copy; Copyright {currentYear}</span>
@@ -105,5 +107,7 @@ const currentYear = new Date().getFullYear();
         }
       });
     </script>
+
+    <SpeedInsights />
   </body>
 </html>

@@ -1,47 +1,23 @@
-# Astro Starter Kit: Minimal
+# Barbora Pšenicová - Psychotherapy Website
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+A modern, responsive website for Barbora Pšenicová, a psychotherapist based in Prague. The website serves as a professional platform to showcase services, provide information about psychotherapy sessions, and offer a way for potential clients to make contact.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Technologies Used
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Framework**: [Astro](https://astro.build) - A modern static site builder
+- **Styling**: [Tailwind CSS](https://tailwindcss.com) - Utility-first CSS framework
+- **Deployment**: [Vercel](https://vercel.com) - Cloud platform for static sites
+- **Performance**: [Vercel Speed Insights](https://vercel.com/speed-insights) - Performance monitoring
+- **Carousel**: [Splide](https://splidejs.com) - Modern and lightweight carousel/slider
+- **Fonts**:
+  - Cinzel - For headings and navigation
+  - Epilogue - For body text and content
 
-## 🚀 Project Structure
+## Features
 
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `pnpm install`         | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Responsive design optimized for all devices
+- Modern, clean UI with smooth animations
+- Contact form for client inquiries
+- Service information and session details
+- Media section for professional content
+- Performance optimized with modern web practices

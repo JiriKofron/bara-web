@@ -1,0 +1,228 @@
+---
+import Shell from '@/layouts/shell.astro';
+import mediaData from './media.json';
+
+const { video, audio, text } = mediaData;
+---
+
+<Shell title="Media" description="Explore our collection of videos, podcasts, and articles">
+  <div class="container mx-auto px-4 py-10">
+    <!-- Hero Section -->
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold mb-4 font-cinzel text-darkest-blue">Media Center</h1>
+      <p class="text-lg text-dark-blue max-w-2xl mx-auto">
+        Discover our collection of videos, podcasts, and articles about mental health, therapy, and
+        personal growth.
+      </p>
+    </div>
+
+    <!-- Video Section -->
+    <section class="mb-16">
+      <div class="flex items-center justify-center mb-8">
+        <div class="w-12 h-0.5 bg-light-blue mr-3"></div>
+        <h2 class="text-3xl font-semibold text-darkest-blue font-cinzel">Featured Videos</h2>
+        <div class="w-12 h-0.5 bg-light-blue ml-3"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          video.data.map(item => (
+            <div class="bg-background-blue rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+              <div class="aspect-w-16 aspect-h-9">
+                <iframe
+                  src={item.data.src}
+                  title={item.data.title}
+                  allow={video.allow}
+                  style={item.data.style}
+                  class="w-full h-full"
+                />
+              </div>
+              <div class="p-5">
+                <h3 class="text-xl font-semibold text-darkest-blue">{item.data.title}</h3>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="mb-16 bg-background-blue py-8 px-6 rounded-lg">
+      <div class="flex items-center justify-center mb-8">
+        <div class="w-12 h-0.5 bg-light-blue mr-3"></div>
+        <h2 class="text-3xl font-semibold text-darkest-blue font-cinzel">Podcasts & Meditations</h2>
+        <div class="w-12 h-0.5 bg-light-blue ml-3"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          audio.map(item => (
+            <div class="bg-white rounded-lg shadow-md p-5 hover:shadow-lg transition-all duration-300">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-light-blue rounded-full flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 text-darkest-blue"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold mb-2 text-darkest-blue">{item.title}</h3>
+                  <p class="text-dark-blue mb-3 text-sm">{item.description}</p>
+                  <div class="flex items-center text-sm text-dark-blue mb-3">
+                    <span class="mr-4 flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 mr-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      {item.duration}
+                    </span>
+                    <span class="flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 mr-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      {new Date(item.date).toLocaleDateString()}
+                    </span>
+                  </div>
+                  <audio controls class="w-full">
+                    <source src={item.src} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Text Articles Section -->
+    <section>
+      <div class="flex items-center justify-center mb-8">
+        <div class="w-12 h-0.5 bg-light-blue mr-3"></div>
+        <h2 class="text-3xl font-semibold text-darkest-blue font-cinzel">Articles & Resources</h2>
+        <div class="w-12 h-0.5 bg-light-blue ml-3"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          text.map(item => (
+            <a href={item.url} class="block group">
+              <div class="bg-background-blue rounded-lg shadow-md p-5 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center justify-between mb-3">
+                  <span class="px-3 py-1 bg-light-blue text-darkest-blue rounded-full text-sm">
+                    {item.category}
+                  </span>
+                  <span class="text-sm text-dark-blue flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 mr-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    {new Date(item.date).toLocaleDateString()}
+                  </span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-darkest-blue group-hover:text-dark-blue transition-colors duration-300">
+                  {item.title}
+                </h3>
+                <p class="text-dark-blue mb-3 text-sm">{item.description}</p>
+                <div class="flex items-center text-dark-blue group-hover:text-darkest-blue transition-colors duration-300">
+                  <span class="text-sm font-medium">Read more</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Shell>
+
+<style>
+  .aspect-w-16 {
+    position: relative;
+    padding-bottom: 56.25%;
+  }
+  .aspect-w-16 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Custom audio player styling */
+  audio {
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+  }
+
+  audio::-webkit-media-controls-panel {
+    background-color: var(--color-light-blue);
+  }
+
+  audio::-webkit-media-controls-play-button {
+    background-color: var(--color-darkest-blue);
+    border-radius: 50%;
+  }
+
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    color: var(--color-darkest-blue);
+  }
+</style>

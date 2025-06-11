@@ -1,0 +1,78 @@
+{
+  "video": {
+    "data": [
+      {
+        "id": 0,
+        "title": "Rozhovory o psychoterapii",
+        "data": {
+          "title": "Rozhovory o psychoterapii",
+          "src": "https://www.youtube.com/embed/XzL05rLSOgo"
+        }
+      },
+      {
+        "id": 1,
+        "title": "Současná situace očima psychoterapeuta",
+        "data": {
+          "title": "Současná situace očima psychoterapeuta",
+          "src": "https://www.facebook.com/plugins/video.php?height=303&href=https%3A%2F%2Fwww.facebook.com%2Fmyterap.io%2Fvideos%2F1552767414880768%2F&show_text=false&width=560&t=0",
+          "style": "border: none; overflow: hidden"
+        }
+      },
+      {
+        "id": 2,
+        "title": "Přestaňme opakovat, že mladá generace je slabá",
+        "data": {
+          "title": "Přestaňme opakovat, že mladá generace je slabá",
+          "src": "https://www.youtube.com/embed/xZAgw6WkVr4",
+          "style": ""
+        }
+      },
+      {
+        "id": 3,
+        "title": "Děti tráví online víc času, než samy chtějí.",
+        "data": {
+          "title": "Děti tráví online víc času, než samy chtějí.",
+          "src": "https://video.aktualne.cz/embed_iframe/spotlight/spotlight-rozhovor-barbora-psenicova-video/r~48e62088110911eeb1f50cc47ab5f122/?media_external=1",
+          "style": "border: none; overflow: hidden"
+        }
+      }
+    ],
+    "allow": "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  },
+  "audio": [
+    {
+      "id": 0,
+      "title": "Podcast: Cesta k sebepoznání",
+      "description": "Rozhovor o tom, jak důležité je poznat sám sebe a jak na to.",
+      "src": "/audio/podcast-1.mp3",
+      "duration": "45:30",
+      "date": "2024-03-10"
+    },
+    {
+      "id": 1,
+      "title": "Meditace pro začátečníky",
+      "description": "Vedená meditace pro ty, kteří s meditací začínají.",
+      "src": "/audio/meditation-1.mp3",
+      "duration": "15:00",
+      "date": "2024-03-05"
+    }
+  ],
+  "text": [
+    {
+      "id": 0,
+      "title": "Jak zvládat stres v práci",
+      "description": "Praktické tipy a techniky pro efektivní zvládání stresu v pracovním prostředí.",
+      "url": "/articles/stress-management",
+      "date": "2024-03-12",
+      "category": "Praktické tipy"
+    },
+    {
+      "id": 1,
+      "title": "Význam sebereflexe v terapii",
+      "description": "Hlubší pohled na to, jak sebereflexe přispívá k úspěšné terapii a osobnímu růstu.",
+      "url": "/articles/self-reflection",
+      "date": "2024-03-01",
+      "category": "Teorie"
+    }
+  ]
+}

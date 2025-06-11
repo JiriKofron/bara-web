@@ -1,0 +1,143 @@
+---
+import unwantedBurden from '@/images/carousel/unwanted_burden.png';
+import difficulties from '@/images/carousel/difficulties.png';
+import relationship from '@/images/carousel/relationship.png';
+import direction from '@/images/carousel/direction.png';
+import changes from '@/images/carousel/changes.png';
+import unhappiness from '@/images/carousel/unhappiness.png';
+import addiction from '@/images/carousel/addiction.png';
+import violence from '@/images/carousel/violence.png';
+import loss from '@/images/carousel/loss.png';
+import identity from '@/images/carousel/identity.png';
+
+const slides = [
+  {
+    id: 0,
+    text: 'mají ve svém životě něco, co tam nechtějí',
+    image: unwantedBurden,
+  },
+  {
+    id: 1,
+    text: 'mají obtíže, které jim ztrpčují život',
+    image: difficulties,
+  },
+  {
+    id: 2,
+    text: 'mají vztahové nebo rodinné obtíže',
+    image: relationship,
+  },
+  {
+    id: 3,
+    text: 'zabývají se směřováním, únavou, rozhodnutím v pracovním životě',
+    image: direction,
+  },
+  {
+    id: 4,
+    text: 'řeší nebo se připravují na velké změny',
+    image: changes,
+  },
+  {
+    id: 5,
+    text: 'jsou trochu nesví, nemají radost a taky třeba vůbec neví, co to znamená',
+    image: unhappiness,
+  },
+  {
+    id: 6,
+    text: 'bojují se závislosti',
+    image: addiction,
+  },
+  {
+    id: 7,
+    text: 'potýkají se s nějakým druhem násilí',
+    image: violence,
+  },
+  {
+    id: 8,
+    text: 'zažívají pocit ztráty',
+    image: loss,
+  },
+  {
+    id: 9,
+    text: 'řeší svou identitu, zabývají se queer tématy',
+    image: identity,
+  },
+];
+---
+
+<div class="splide my-8">
+  <div class="splide__track flex flex-col gap-8">
+    <h3 class="mb-4 text-center font-cinzel text-2xl font-semibold">
+      Nejčastěji pracuji s lidmi, kteří:
+    </h3>
+    <ul class="splide__list">
+      {
+        slides.map(slide => (
+          <li class="splide__slide flex flex-col items-center gap-4">
+            <img src={slide.image.src} alt={slide.text} width={300} height={300} />
+            <p class="px-2 text-center font-cinzel text-xl font-semibold text-white">
+              {slide.text}
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+
+<script>
+  import '@splidejs/splide/css';
+  import Splide from '@splidejs/splide';
+
+  // Wait for both DOM and images to be loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    // Small delay to ensure Astro hydration is complete
+    setTimeout(() => {
+      new Splide('.splide', {
+        type: 'loop',
+        perPage: 4,
+        breakpoints: {
+          640: {
+            perPage: 1,
+          },
+        },
+        perMove: 1,
+        gap: '2rem',
+        pagination: false,
+        arrows: false,
+        autoplay: true,
+        interval: 4000,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        pauseOnScroll: false,
+        pauseOnMouseEnter: false,
+        pauseOnMouseLeave: false,
+      }).mount();
+    }, 400);
+  });
+</script>
+
+<style>
+  .swiper {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+
+  .swiper-wrapper {
+    display: flex;
+  }
+
+  .swiper-slide {
+    display: flex;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 24px;
+  }
+</style>

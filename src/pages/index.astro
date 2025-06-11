@@ -10,6 +10,7 @@ import ContactButton from '../components/ContactButton.astro';
 import IntroSection from '../components/IntroSection.astro';
 import ServiceCards from '../components/ServiceCards.astro';
 import CodexText from '../components/CodexText.astro';
+import CarouselSection from '../components/CarouselSection.astro';
 
 const title = 'Barbora Pšenicová | Psychoterapie';
 const description = 'Hledáte ve své situaci oporu, pochopení a respekt? Velmi ráda vám je nabídnu.';
@@ -67,12 +68,16 @@ const description = 'Hledáte ve své situaci oporu, pochopení a respekt? Velmi
     <IntroSection />
   </section>
 
-  <section class="flex w-full justify-center bg-background-blue p-8 md:p-12 lg:p-16">
+  <section class="flex w-full justify-center bg-background-blue p-8 md:p-12 lg:py-20">
     <ServiceCards />
   </section>
 
   <section class="flex w-full justify-center bg-darkest-blue">
     <CodexText />
+  </section>
+
+  <section class="flex w-full justify-center bg-darkest-blue">
+    <CarouselSection />
   </section>
 </Shell>
 

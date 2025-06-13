@@ -1,0 +1,94 @@
+{
+  "video": {
+    "data": [
+      {
+        "id": 0,
+        "title": "Rozhovory o psychoterapii",
+        "data": {
+          "title": "Rozhovory o psychoterapii",
+          "src": "https://www.youtube.com/embed/XzL05rLSOgo"
+        }
+      },
+      {
+        "id": 1,
+        "title": "Současná situace očima psychoterapeuta",
+        "data": {
+          "title": "Současná situace očima psychoterapeuta",
+          "src": "https://www.facebook.com/plugins/video.php?height=303&href=https%3A%2F%2Fwww.facebook.com%2Fmyterap.io%2Fvideos%2F1552767414880768%2F&show_text=false&width=560&t=0",
+          "style": "border: none; overflow: hidden"
+        }
+      },
+      {
+        "id": 2,
+        "title": "Přestaňme opakovat, že mladá generace je slabá",
+        "data": {
+          "title": "Přestaňme opakovat, že mladá generace je slabá",
+          "src": "https://www.youtube.com/embed/xZAgw6WkVr4",
+          "style": ""
+        }
+      },
+      {
+        "id": 3,
+        "title": "Děti tráví online víc času, než samy chtějí.",
+        "data": {
+          "title": "Děti tráví online víc času, než samy chtějí.",
+          "src": "https://video.aktualne.cz/embed_iframe/spotlight/spotlight-rozhovor-barbora-psenicova-video/r~48e62088110911eeb1f50cc47ab5f122/?media_external=1",
+          "style": "border: none; overflow: hidden"
+        }
+      }
+    ],
+    "allow": "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  },
+  "audio": [
+    {
+      "id": 0,
+      "title": "Malé duše, velké starosti",
+      "description": "Report z konference Malé duše, velké starosti o duševním stavu dětí a dospělých.",
+      "src": "https://audioarchiv.proglas.cz/mp3/072/audio_72885.mp3",
+      "duration": "29:27",
+      "date": "2024-11-20"
+    }
+  ],
+  "text": [
+    {
+      "id": 0,
+      "title": "Duševní zdraví mladých lidí 35 let po revoluci. Husákovi vnuci nejsou sněhové vločky",
+      "description": "Duševní zdraví a mladí lidé, téma proplouvá médii každý den, mluví se o generačním střetu. Jedni nemohli cestovat, hrozily jim pendreky a vězení, druzí pozorují, jak se svět politicky a klimaticky hroutí a zdá se, že nikdo nepodniká kroky k řešení. Je srovnání života v odlišných érách možné? V rozhovoru v podcastu Balanc o tom 17. listopadu na akci Korzo Národní debatovali Bára Pšenicová, ředitelka organizace Nevypusť duši, a Daniel Prokop, sociolog z agentury PAQ research.",
+      "url": "https://wave.rozhlas.cz/dusevni-zdravi-mladych-lidi-35-let-po-revoluci-husakovi-vnuci-nejsou-snehove-9360990",
+      "date": "2024-03-12",
+      "category": ["Podcast"]
+    },
+    {
+      "id": 1,
+      "title": "Nenabízejte okamžité řešení, spíš se ptejte. Jak mluvit s dětmi a puberťáky",
+      "description": "Základy duševního zdraví získává člověk v dětství, a to především v rodině. Jako rodiče a prarodiče bychom si měli všimnout prvních signálů toho, že se s dítětem něco děje.",
+      "url": "https://budejovice.rozhlas.cz/nenabizejte-okamzite-reseni-spis-se-ptejte-jak-mluvit-s-detmi-a-pubertaky-radi-9326069",
+      "date": "2024-10-03",
+      "category": ["Rozhovor"]
+    },
+    {
+      "id": 2,
+      "title": "Duševní hygiena je pro mladé klíčová, starší je často nechápou. A firmy téma pořád ještě přehlíží",
+      "description": "Generační rozdíly v přístupu k duševnímu zdraví ovlivňují pracovní prostředí. Otevírání tématu by přitom posílilo i produktivitu zaměstnanců.",
+      "url": "https://cc.cz/dusevni-hygiena-je-pro-mlade-klicova-starsi-je-casto-nechapou-a-firmy-tema-porad-jeste-prehlizi/",
+      "date": "2024-09-17",
+      "category": ["Článek"]
+    },
+    {
+      "id": 3,
+      "title": "Dnešní děti vyrůstají v pěnovém obalu. Citlivé jsou kvůli rodičům, popisují experti",
+      "description": "Přezdívá se jí generace sněhových vloček, mluví se o nich jako o přecitlivělých a náročných. 'Náročná je doba, ne děti. Možná jsme je jako rodiče nenaučili, jak zvládat stres, protože jsme žili v pohodových časech,' říkají odborníci o generaci Z. O tom, v čem je specifická a jak ji lépe připravit na život, mluvili hosté v debatě projektu Chytré Česko.",
+      "url": "https://zpravy.aktualne.cz/domaci/chytre-cesko-gen-z/r~b01d3b44354111ef80bfac1f6b220ee8/",
+      "date": "2025-06-30",
+      "category": ["Článek", "Debata", "Rozhovor"]
+    },
+    {
+      "id": 4,
+      "title": "Pocity úzkosti a strachu jsou normální, ale jedná se o varovné signály",
+      "description": "Pocity úzkosti a strachu jsou normální, ale jedná se o varovné signály. Zlehčování těchto pocitů může vést k dalším psychickým potížím.",
+      "url": "https://zpravy.aktualne.cz/terapeutka-vliv-rodiny-je-zasadni-kvuli-zlehcovani-uzkosti-m/r~4171f02a19dc11efa1910cc47ab5f122/",
+      "date": "2025-05-30",
+      "category": ["Článek", "Rozhovor"]
+    }
+  ]
+}

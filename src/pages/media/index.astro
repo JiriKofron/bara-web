@@ -1,0 +1,323 @@
+---
+import Shell from '@/layouts/shell.astro';
+import mediaData from './media.json';
+
+const { video, audio, text } = mediaData;
+---
+
+<Shell title="Media" description="Explore our collection of videos, podcasts, and articles">
+  <div class="container mx-auto px-4 py-10">
+    <section>
+      <div class="flex items-center justify-center mb-8">
+        <div class="w-12 h-0.5 bg-light-blue mr-3"></div>
+        <h2 class="text-3xl font-semibold text-darkest-blue font-cinzel">Články a rozhovory</h2>
+        <div class="w-12 h-0.5 bg-light-blue ml-3"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 place-content-center size-fit mx-auto">
+        {
+          text.map(item => (
+            <a
+              href={item.url}
+              class="block group w-full max-w-lg flex flex-col items-center mx-auto"
+              target="_blank"
+            >
+              <div class="bg-background-blue rounded-lg shadow-md p-5 hover:shadow-lg transition-all duration-300">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center flex-wrap gap-2">
+                    {item.category.map(category => (
+                      <span class="px-3 py-1 bg-light-blue text-darkest-blue rounded-full text-sm font-cinzel uppercase">
+                        {category}
+                      </span>
+                    ))}
+                  </div>
+
+                  <span class="text-sm text-dark-blue flex items-center text-nowrap">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-4 w-4 mr-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                    {new Date(item.date).toLocaleDateString('cs-CZ', {
+                      day: '2-digit',
+                      month: '2-digit',
+                      year: 'numeric',
+                    })}
+                  </span>
+                </div>
+                <h3 class="text-xl font-semibold mb-2 text-darkest-blue group-hover:text-dark-blue transition-colors duration-300">
+                  {item.title}
+                </h3>
+                <p class="text-dark-blue mb-3 text-sm">{item.description}</p>
+                <div class="flex items-center text-dark-blue group-hover:text-darkest-blue transition-colors duration-300">
+                  <span class="text-sm font-medium">Číst dále</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    height="20"
+                    width="20"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="my-16 max-w-screen-lg mx-auto">
+      <div class="flex items-center justify-center mb-8">
+        <div class="w-12 h-0.5 bg-light-blue mr-3"></div>
+        <h2 class="text-3xl font-semibold text-darkest-blue font-cinzel">Video</h2>
+        <div class="w-12 h-0.5 bg-light-blue ml-3"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- Main Video Column -->
+        <div class="lg:col-span-2">
+          <div class="bg-background-blue rounded-lg shadow-md overflow-hidden">
+            <div class="aspect-w-16 aspect-h-9">
+              <iframe
+                id="main-video"
+                src={video.data[0].data.src}
+                title={video.data[0].data.title}
+                allow={video.allow}
+                style={video.data[0].data.style}
+                class="w-full h-full"></iframe>
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-semibold text-darkest-blue" id="main-video-title">
+                {video.data[0].data.title}
+              </h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Thumbnails Column -->
+        <div class="lg:col-span-1">
+          <div class="bg-background-blue rounded-lg shadow-md p-4">
+            <h4 class="text-2xl font-semibold text-darkest-blue font-cinzel mb-4">Další videa</h4>
+            <div class="flex flex-col gap-4 font-epilogue overflow-hidden" id="video-thumbnails">
+              {
+                video.data.slice(1).map((item, index) => (
+                  <button
+                    class="w-full bg-white rounded-lg shadow-sm p-3 hover:shadow-md transition-all duration-300 flex flex-col gap-4 items-start space-x-3 group text-left"
+                    data-video-index={index + 1}
+                  >
+                    <div class="min-w-0 overflow-hidden">
+                      <h5 class="text-md text-darkest-blue text-wrap text-leftfont-medium text-darkest-blue group-hover:text-dark-blue transition-colors duration-300 truncate">
+                        {item.data.title}
+                      </h5>
+                    </div>
+
+                    <div class="bg-light-blue rounded overflow-hidden flex-shrink-0">
+                      <iframe
+                        src={item.data.src}
+                        title={item.data.title}
+                        allow={video.allow}
+                        style={item.data.style}
+                        class="w-full h-full pointer-events-none"
+                      />
+                    </div>
+                  </button>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Next Button -->
+      <div class="lg:hidden mt-6 text-center">
+        <button
+          id="show-more-videos"
+          class="bg-light-blue text-darkest-blue px-6 py-2 rounded-lg hover:bg-dark-blue hover:text-white transition-colors duration-300"
+        >
+          Zobrazit více
+        </button>
+      </div>
+    </section>
+
+    <!-- Audio Section -->
+    <section class="mb-16 bg-background-blue py-8 px-6 rounded-lg">
+      <div class="flex items-center justify-center mb-8">
+        <div class="w-12 h-0.5 bg-light-blue mr-3"></div>
+        <h2 class="text-3xl font-semibold text-darkest-blue font-cinzel">Podcasty a audio</h2>
+        <div class="w-12 h-0.5 bg-light-blue ml-3"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 place-content-center size-fit mx-auto">
+        {
+          audio.map(item => (
+            <div class="bg-white rounded-lg shadow-md p-5 hover:shadow-lg transition-all duration-300 max-w-lg">
+              <div class="flex items-start space-x-4">
+                <div class="flex-shrink-0">
+                  <div class="w-12 h-12 bg-light-blue rounded-full flex items-center justify-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-6 w-6 text-darkest-blue"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-xl font-semibold mb-2 text-darkest-blue">{item.title}</h3>
+                  <p class="text-dark-blue mb-3 text-sm">{item.description}</p>
+                  <div class="flex items-center text-sm text-dark-blue mb-3">
+                    <span class="mr-4 flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 mr-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      {item.duration}
+                    </span>
+                    <span class="flex items-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-4 w-4 mr-1"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                      {new Date(item.date).toLocaleDateString('cs-CZ', {
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric',
+                      })}
+                    </span>
+                  </div>
+                  <audio controls class="w-full">
+                    <source src={item.src} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div>
+</Shell>
+
+<style>
+  .aspect-w-16 {
+    position: relative;
+    padding-bottom: 56.25%;
+  }
+  .aspect-w-16 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  audio::-webkit-media-controls-panel {
+    background-color: var(--color-light-blue);
+  }
+
+  audio::-webkit-media-controls-play-button {
+    background-color: var(--color-darkest-blue);
+    border-radius: 50%;
+  }
+
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    color: var(--color-darkest-blue);
+  }
+</style>
+
+<script define:vars={{ videoData: video.data }}>
+  function changeVideo(index) {
+    const mainVideo = document.getElementById('main-video');
+    const mainVideoTitle = document.getElementById('main-video-title');
+
+    if (mainVideo && mainVideoTitle && videoData[index]) {
+      mainVideo.src = videoData[index].data.src;
+      mainVideo.title = videoData[index].data.title;
+      mainVideoTitle.textContent = videoData[index].data.title;
+
+      if (window.innerWidth < 1024) {
+        mainVideo.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const thumbnails = document.querySelectorAll('#video-thumbnails button');
+    thumbnails.forEach(button => {
+      button.addEventListener('click', () => {
+        const index = parseInt(button.dataset.videoIndex);
+        changeVideo(index);
+      });
+    });
+
+    if (window.innerWidth < 1024) {
+      const thumbnails = document.getElementById('video-thumbnails');
+      const button = document.getElementById('show-more-videos');
+
+      if (thumbnails && button) {
+        thumbnails.classList.add('hidden');
+
+        button.addEventListener('click', () => {
+          if (thumbnails.classList.contains('hidden')) {
+            thumbnails.classList.remove('hidden');
+            button.textContent = 'Skrýt';
+          } else {
+            thumbnails.classList.add('hidden');
+            button.textContent = 'Zobrazit více';
+          }
+        });
+      }
+    }
+  });
+</script>

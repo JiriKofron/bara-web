@@ -1,0 +1,75 @@
+---
+import Shell from '@/layouts/shell.astro';
+import portrait from '@/images/Barbora_Psenicova_portrait_medium.webp';
+import conference from '@/images/ND_BP_konference.webp';
+---
+
+<Shell title="O mně" description="O mně">
+  <main class="container mx-auto px-4 py-12 max-w-4xl">
+    <h1 class="text-4xl font-bold mb-12 text-center font-cinzel text-darkest-blue">O mně</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-darkest-blue font-epilogue">
+      <div class="space-y-6">
+        <img
+          src={portrait.src}
+          alt="Portrét Barbory Pšenicové"
+          class="w-full h-auto aspect-auto object-top rounded-lg shadow-lg"
+        />
+      </div>
+
+      <div class="space-y-6">
+        <p class="text-lg leading-relaxed">
+          V současné době pracuji v neziskovém sektoru, kde se zabývám změnou jako aktivní součástí
+          procesu rozvoje a snažím se být hybatelkou sociálních inovací. Využívám nástroje human
+          centered design, které pomáhají hledat možnosti a prostor pro zlepšování sociálních služeb
+          a zaměřují se především na potřeby klientů a klientek.
+        </p>
+        <p class="text-lg leading-relaxed">
+          Velmi dobře si rozumím s projektovým řízením a lektoruji v oblastech spjatých s lidskými
+          právy. Věnuji se i výzkumné a evaluační činnosti, spolupracovala jsem výzkumně na tématech
+          dětského duševního zdraví v České republice, dopady práce se sexualitou v zařízeních
+          sociálních služeb nebo na tématu násilí v sexbyznysu.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-8 rounded-xl mb-12">
+      <h2 class="text-2xl font-semibold mb-6 font-cinzel text-darkest-blue">Vzdělání a výcvik</h2>
+      <p class="text-lg leading-relaxed mb-6 font-epilogue text-darkest-blue">
+        Absolvovala jsem pětiletý výcvik Terapie v postmoderně pod odborným vedením MUDr. Olgy
+        Kunertové. Díky tomu mě oslovují různé druhy práce, jako například narativní, krátká terapie
+        orientovaná na řešení nebo zakázkový přístup. Mám základy krizové intervence, komplexní
+        výcvik v mediaci a kariérovém poradenství. Absolvovala jsem mnoho různých dílčích školení,
+        například Úvod do práce s traumatizovanou osobou nebo Kids Skills zaměřené na řešení
+        problémů při práci s dětmi, jejich rodiči a celou komunitou. Jsem pod supervizí a řádnou
+        členkou České asociace pro psychoterapii.
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      <h2 class="text-2xl font-semibold font-cinzel text-darkest-blue">Terapeutický přístup</h2>
+      <p class="text-lg leading-relaxed font-epilogue text-darkest-blue">
+        Vycházím hodně ze systemické terapie a konstruktivistických teorií. Inspirují mě
+        psychoterapeutické školy a osobnosti jako jsou Insoo Kim Berg, Erik Erikson, Kurt Ludewig,
+        Harlene Anderson nebo Michael White. Ze současných terapeutů a terapeutek si vážím práce
+        Sabine Vermeire.
+      </p>
+      <div class="flex justify-center">
+        <img
+          src={conference.src}
+          alt="Barbora Pšenicová na konferenci"
+          class="w-full max-w-2xl h-auto aspect-auto object-top rounded-lg shadow-lg"
+        />
+      </div>
+    </div>
+  </main>
+</Shell>
+
+<style>
+  .container {
+    font-family:
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+</style>

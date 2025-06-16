@@ -15,6 +15,9 @@ export default defineConfig({
         '@': '/src',
       },
     },
+    server: {
+      allowedHosts: ['psenicova.local'],
+    },
   },
 
   adapter: vercel(),

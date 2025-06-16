@@ -4,8 +4,6 @@ import '@/styles/fonts.css';
 import MainNavigation from '@/components/MainNavigation.astro';
 import capLogo from '@/images/cap-logo-barevne.webp';
 import portraitSmall from '@/images/Barbora_Psenicova_portrait_small.webp';
-import heroImagePortraitLarge from '@/images/Barbora_Psenicova_portrait_large.webp';
-import heroImageBodyLarge from '@/images/Barbora_Psenicova_stand_large.webp';
 
 import SpeedInsights from '@vercel/speed-insights/astro';
 import { ClientRouter } from 'astro:transitions';
@@ -94,37 +92,6 @@ const serviceData = {
     <link rel="icon" type="image/svg+xml" href="/therapy_1_50.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
-
-    <!-- Preload critical resources -->
-    <link
-      rel="preload"
-      href={heroImagePortraitLarge.src}
-      as="image"
-      type="image/webp"
-      fetchpriority="high"
-    />
-    <link
-      rel="preload"
-      href={heroImageBodyLarge.src}
-      as="image"
-      type="image/webp"
-      fetchpriority="high"
-    />
-    <link rel="preload" href={capLogo.src} as="image" type="image/webp" />
-    <link
-      rel="preload"
-      href="/fonts/cinzel/Cinzel-VariableFont_wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
-    <link
-      rel="preload"
-      href="/fonts/epilogue/Epilogue-VariableFont_wght.ttf"
-      as="font"
-      type="font/ttf"
-      crossorigin
-    />
 
     <!-- Canonical URL -->
     <link rel="canonical" href={canonicalURL} />

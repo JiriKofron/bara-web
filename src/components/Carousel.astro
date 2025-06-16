@@ -1,14 +1,14 @@
 ---
-import unwantedBurden from '@/images/carousel/unwanted_burden.png';
-import difficulties from '@/images/carousel/difficulties.png';
-import relationship from '@/images/carousel/relationship.png';
-import direction from '@/images/carousel/direction.png';
-import changes from '@/images/carousel/changes.png';
-import unhappiness from '@/images/carousel/unhappiness.png';
-import addiction from '@/images/carousel/addiction.png';
-import violence from '@/images/carousel/violence.png';
-import loss from '@/images/carousel/loss.png';
-import identity from '@/images/carousel/identity.png';
+import unwantedBurden from '@/images/carousel/unwanted_burden.webp';
+import difficulties from '@/images/carousel/difficulties.webp';
+import relationship from '@/images/carousel/relationship.webp';
+import direction from '@/images/carousel/direction.webp';
+import changes from '@/images/carousel/changes.webp';
+import unhappiness from '@/images/carousel/unhappiness.webp';
+import addiction from '@/images/carousel/addiction.webp';
+import violence from '@/images/carousel/violence.webp';
+import loss from '@/images/carousel/loss.webp';
+import identity from '@/images/carousel/identity.webp';
 
 const slides = [
   {
@@ -73,7 +73,7 @@ const slides = [
       {
         slides.map(slide => (
           <li class="splide__slide flex flex-col items-center gap-4">
-            <img src={slide.image.src} alt={slide.text} width={300} height={300} />
+            <img src={slide.image.src} width={300} height={300} aria-hidden="true" />
             <p class="px-2 text-center font-cinzel text-xl font-semibold text-white">
               {slide.text}
             </p>

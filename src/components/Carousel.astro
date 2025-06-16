@@ -1,14 +1,14 @@
 ---
-import unwantedBurden from '@/images/carousel/unwanted_burden.png';
-import difficulties from '@/images/carousel/difficulties.png';
-import relationship from '@/images/carousel/relationship.png';
-import direction from '@/images/carousel/direction.png';
-import changes from '@/images/carousel/changes.png';
-import unhappiness from '@/images/carousel/unhappiness.png';
-import addiction from '@/images/carousel/addiction.png';
-import violence from '@/images/carousel/violence.png';
-import loss from '@/images/carousel/loss.png';
-import identity from '@/images/carousel/identity.png';
+import unwantedBurden from '@/images/carousel/unwanted_burden.webp';
+import difficulties from '@/images/carousel/difficulties.webp';
+import relationship from '@/images/carousel/relationship.webp';
+import direction from '@/images/carousel/direction.webp';
+import changes from '@/images/carousel/changes.webp';
+import unhappiness from '@/images/carousel/unhappiness.webp';
+import addiction from '@/images/carousel/addiction.webp';
+import violence from '@/images/carousel/violence.webp';
+import loss from '@/images/carousel/loss.webp';
+import identity from '@/images/carousel/identity.webp';
 
 const slides = [
   {
@@ -64,16 +64,20 @@ const slides = [
 ];
 ---
 
-<div class="splide my-8">
+<div class="splide my-8" role="region" aria-label="Seznam témat psychoterapie">
   <div class="splide__track flex flex-col gap-8">
     <h3 class="mb-4 text-center font-cinzel text-2xl font-semibold">
       Nejčastěji pracuji s lidmi, kteří:
     </h3>
-    <ul class="splide__list">
+    <ul class="splide__list" role="list" aria-live="polite">
       {
         slides.map(slide => (
-          <li class="splide__slide flex flex-col items-center gap-4">
-            <img src={slide.image.src} alt={slide.text} width={300} height={300} />
+          <li
+            class="splide__slide flex flex-col items-center gap-4"
+            role="listitem"
+            aria-label={slide.text}
+          >
+            <img src={slide.image.src} width={300} height={300} alt="" aria-hidden="true" />
             <p class="px-2 text-center font-cinzel text-xl font-semibold text-white">
               {slide.text}
             </p>
@@ -89,26 +93,29 @@ const slides = [
   import Splide from '@splidejs/splide';
 
   document.addEventListener('astro:page-load', () => {
-    new Splide('.splide', {
-      type: 'loop',
-      perPage: 4,
-      breakpoints: {
-        640: {
-          perPage: 1,
+    const carousel = document.querySelector('.splide');
+    if (carousel) {
+      new Splide('.splide', {
+        type: 'loop',
+        perPage: 4,
+        breakpoints: {
+          640: {
+            perPage: 1,
+          },
         },
-      },
-      perMove: 1,
-      gap: '2rem',
-      pagination: false,
-      arrows: false,
-      autoplay: true,
-      interval: 4000,
-      pauseOnHover: false,
-      pauseOnFocus: false,
-      pauseOnScroll: false,
-      pauseOnMouseEnter: false,
-      pauseOnMouseLeave: false,
-    }).mount();
+        perMove: 1,
+        gap: '2rem',
+        pagination: false,
+        arrows: false,
+        autoplay: true,
+        interval: 4000,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        pauseOnScroll: false,
+        pauseOnMouseEnter: false,
+        pauseOnMouseLeave: false,
+      }).mount();
+    }
   });
 </script>
 

@@ -1,0 +1,53 @@
+---
+import Shell from '@/layouts/shell.astro';
+---
+
+<Shell
+  title="Stránka nenalezena | Barbora Pšenicová"
+  description="Někdy se ztratíme, abychom našli sami sebe."
+>
+  <div class="flex min-h-[80vh] w-full flex-col items-center justify-center px-4 py-16 text-center">
+    <div class="relative mb-16">
+      <div class="absolute -inset-8 animate-pulse rounded-full bg-light-blue opacity-30"></div>
+      <div class="relative">
+        <h1 class="font-cinzel text-8xl leading-none text-darkest-blue">404</h1>
+      </div>
+    </div>
+
+    <div class="max-w-2xl space-y-8">
+      <div class="space-y-4 font-epilogue text-lg text-dark-blue">
+        <p>
+          Stejně jako v životě, i na webu se občas ocitneme na místě, které jsme nehledali. Není to
+          chyba, je to příležitost.
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center gap-4">
+        <a
+          href="/"
+          class="group relative overflow-hidden rounded-lg bg-dark-blue px-8 py-4 font-cinzel text-lg text-white transition-all hover:bg-darkest-blue"
+        >
+          <span class="relative z-10">Vrátit se domů</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</Shell>
+
+<style>
+  @keyframes pulse {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.5;
+    }
+  }
+
+  .animate-pulse {
+    animation: pulse 3s ease-in-out infinite;
+  }
+</style>

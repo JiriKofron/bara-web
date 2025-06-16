@@ -5,6 +5,7 @@ import MainNavigation from '@/components/MainNavigation.astro';
 import capLogo from '@/images/cap-logo-barevne.webp';
 
 import SpeedInsights from '@vercel/speed-insights/astro';
+import { ClientRouter } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -39,8 +40,10 @@ const currentYear = new Date().getFullYear();
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <script
+      is:inline
       src="https://www.google.com/recaptcha/enterprise.js?render=6Lfh4GIrAAAAAIxlzw-rv7RHdYWAHsf7C-_EvC4K"
     ></script>
+    <ClientRouter />
   </head>
   <body>
     <header
@@ -50,7 +53,7 @@ const currentYear = new Date().getFullYear();
       <MainNavigation />
     </header>
     <main
-      class="flex min-h-[80dvh] w-full flex-col items-center justify-center bg-background-blue pt-16"
+      class="flex min-h-[90dvh] w-full flex-col items-center justify-center bg-background-blue pt-16"
     >
       <slot />
     </main>

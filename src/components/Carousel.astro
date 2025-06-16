@@ -88,31 +88,27 @@ const slides = [
   import '@splidejs/splide/css';
   import Splide from '@splidejs/splide';
 
-  // Wait for both DOM and images to be loaded
-  document.addEventListener('DOMContentLoaded', () => {
-    // Small delay to ensure Astro hydration is complete
-    setTimeout(() => {
-      new Splide('.splide', {
-        type: 'loop',
-        perPage: 4,
-        breakpoints: {
-          640: {
-            perPage: 1,
-          },
+  document.addEventListener('astro:page-load', () => {
+    new Splide('.splide', {
+      type: 'loop',
+      perPage: 4,
+      breakpoints: {
+        640: {
+          perPage: 1,
         },
-        perMove: 1,
-        gap: '2rem',
-        pagination: false,
-        arrows: false,
-        autoplay: true,
-        interval: 4000,
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        pauseOnScroll: false,
-        pauseOnMouseEnter: false,
-        pauseOnMouseLeave: false,
-      }).mount();
-    }, 400);
+      },
+      perMove: 1,
+      gap: '2rem',
+      pagination: false,
+      arrows: false,
+      autoplay: true,
+      interval: 4000,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      pauseOnScroll: false,
+      pauseOnMouseEnter: false,
+      pauseOnMouseLeave: false,
+    }).mount();
   });
 </script>
 

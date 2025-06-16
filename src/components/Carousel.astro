@@ -64,16 +64,20 @@ const slides = [
 ];
 ---
 
-<div class="splide my-8">
+<div class="splide my-8" role="region" aria-label="Seznam témat psychoterapie">
   <div class="splide__track flex flex-col gap-8">
     <h3 class="mb-4 text-center font-cinzel text-2xl font-semibold">
       Nejčastěji pracuji s lidmi, kteří:
     </h3>
-    <ul class="splide__list">
+    <ul class="splide__list" role="list" aria-live="polite">
       {
         slides.map(slide => (
-          <li class="splide__slide flex flex-col items-center gap-4">
-            <img src={slide.image.src} width={300} height={300} aria-hidden="true" />
+          <li
+            class="splide__slide flex flex-col items-center gap-4"
+            role="listitem"
+            aria-label={slide.text}
+          >
+            <img src={slide.image.src} width={300} height={300} alt="" aria-hidden="true" />
             <p class="px-2 text-center font-cinzel text-xl font-semibold text-white">
               {slide.text}
             </p>

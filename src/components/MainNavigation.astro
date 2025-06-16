@@ -22,12 +22,17 @@ const currentPath = Astro.url.pathname;
 const filteredItems = navigationItems.filter(item => item.href !== currentPath);
 ---
 
-<nav class="flex w-full px-6 py-4 text-darkest-blue">
-  <ul class="flex w-full items-center justify-center gap-8 md:gap-12">
+<nav class="flex w-full px-6 py-4 text-darkest-blue" aria-label="Hlavní navigace">
+  <ul class="flex w-full items-center justify-center gap-8 md:gap-12" role="menubar">
     {
       filteredItems.map(item => (
-        <li class="font-cinzel text-lg transition-all duration-300 hover:scale-105 hover:text-contract-red md:text-xl">
-          <a href={item.href}>{item.label}</a>
+        <li
+          class="font-cinzel text-lg transition-all duration-300 hover:scale-105 hover:text-contract-red md:text-xl"
+          role="none"
+        >
+          <a href={item.href} role="menuitem">
+            {item.label}
+          </a>
         </li>
       ))
     }

@@ -30,7 +30,7 @@ export const POST: APIRoute = async ({ request }) => {
 
     const data = await resend.emails.send({
       from: 'Kontaktní formulář psenicova.cz <barbora@psenicova.cz>',
-      to: email,
+      to: 'b.psenicova@gmail.com',
       subject: `Nová zpráva z kontaktního formuláře od ${name}`,
       text: `
         Name: ${name}

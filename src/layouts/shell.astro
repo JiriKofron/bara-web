@@ -6,6 +6,7 @@ import capLogo from '@/images/cap-logo-barevne.webp';
 import portraitSmall from '@/images/Barbora_Psenicova_portrait_small.webp';
 
 import SpeedInsights from '@vercel/speed-insights/astro';
+import Analytics from '@vercel/analytics/astro';
 import { ClientRouter } from 'astro:transitions';
 
 interface Props {
@@ -241,5 +242,6 @@ const serviceData = {
     </script>
 
     <SpeedInsights />
+    <Analytics />
   </body>
 </html>

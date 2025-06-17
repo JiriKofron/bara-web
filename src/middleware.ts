@@ -4,7 +4,7 @@ export const onRequest = defineMiddleware(async (context, next) => {
   // Define CSP directives
   const cspDirectives = [
     "default-src 'self'",
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.youtube.com https://www.facebook.com https://video.aktualne.cz https://audioarchiv.proglas.cz",
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://www.youtube.com https://www.facebook.com https://video.aktualne.cz https://audioarchiv.proglas.cz",
     "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: https:",
     "font-src 'self'",

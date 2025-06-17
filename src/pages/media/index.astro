@@ -8,33 +8,33 @@ const { video, audio, text } = mediaData;
 <Shell title="Media" description="Explore our collection of videos, podcasts, and articles">
   <div class="container mx-auto px-4 py-10">
     <section>
-      <div class="flex items-center justify-center mb-8">
-        <div class="w-12 h-0.5 bg-light-blue mr-3"></div>
-        <h2 class="text-3xl font-semibold text-darkest-blue font-cinzel">Články a rozhovory</h2>
-        <div class="w-12 h-0.5 bg-light-blue ml-3"></div>
+      <div class="mb-8 flex items-center justify-center">
+        <div class="mr-3 h-0.5 w-12 bg-light-blue"></div>
+        <h2 class="font-cinzel text-3xl font-semibold text-darkest-blue">Články a rozhovory</h2>
+        <div class="ml-3 h-0.5 w-12 bg-light-blue"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 place-content-center size-fit mx-auto">
+      <div class="mx-auto grid size-fit grid-cols-1 place-content-center gap-6 md:grid-cols-2">
         {
           text.map(item => (
             <a
               href={item.url}
-              class="block group w-full max-w-lg flex flex-col items-center mx-auto"
+              class="group mx-auto block flex w-full max-w-lg flex-col items-center"
               target="_blank"
             >
-              <div class="bg-background-blue rounded-lg shadow-md p-5 hover:shadow-lg transition-all duration-300">
-                <div class="flex items-center justify-between mb-3">
-                  <div class="flex items-center flex-wrap gap-2">
+              <div class="rounded-lg bg-background-blue p-5 shadow-md transition-all duration-300 hover:shadow-lg">
+                <div class="mb-3 flex items-center justify-between">
+                  <div class="flex flex-wrap items-center gap-2">
                     {item.category.map(category => (
-                      <span class="px-3 py-1 bg-light-blue text-darkest-blue rounded-full text-sm font-cinzel uppercase">
+                      <span class="rounded-full bg-light-blue px-3 py-1 font-cinzel text-sm text-darkest-blue uppercase">
                         {category}
                       </span>
                     ))}
                   </div>
 
-                  <span class="text-sm text-dark-blue flex items-center text-nowrap">
+                  <span class="flex items-center text-sm text-nowrap text-dark-blue">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-4 w-4 mr-1"
+                      class="mr-1 h-4 w-4"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -53,15 +53,15 @@ const { video, audio, text } = mediaData;
                     })}
                   </span>
                 </div>
-                <h3 class="text-xl font-semibold mb-2 text-darkest-blue group-hover:text-dark-blue transition-colors duration-300">
+                <h3 class="mb-2 text-xl font-semibold text-darkest-blue transition-colors duration-300 group-hover:text-dark-blue">
                   {item.title}
                 </h3>
-                <p class="text-dark-blue mb-3 text-sm">{item.description}</p>
-                <div class="flex items-center text-dark-blue group-hover:text-darkest-blue transition-colors duration-300">
+                <p class="mb-3 text-sm text-dark-blue">{item.description}</p>
+                <div class="flex items-center text-dark-blue transition-colors duration-300 group-hover:text-darkest-blue">
                   <span class="text-sm font-medium">Číst dále</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="ml-1 transform group-hover:translate-x-1 transition-transform duration-300"
+                    class="ml-1 transform transition-transform duration-300 group-hover:translate-x-1"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                     height="20"
@@ -82,7 +82,7 @@ const { video, audio, text } = mediaData;
     </section>
 
     <!-- Video Section -->
-    <section class="my-16 max-w-screen-lg mx-auto">
+    <!-- <section class="my-16 max-w-screen-lg mx-auto">
       <div class="flex items-center justify-center mb-8">
         <div class="w-12 h-0.5 bg-light-blue mr-3"></div>
         <h2 class="text-3xl font-semibold text-darkest-blue font-cinzel">Video</h2>
@@ -90,7 +90,7 @@ const { video, audio, text } = mediaData;
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <!-- Main Video Column -->
+        Main Video Column
         <div class="lg:col-span-2">
           <div class="bg-background-blue rounded-lg shadow-md overflow-hidden">
             <div class="aspect-w-16 aspect-h-9">
@@ -110,7 +110,7 @@ const { video, audio, text } = mediaData;
           </div>
         </div>
 
-        <!-- Thumbnails Column -->
+        Thumbnails Column  
         <div class="lg:col-span-1">
           <div class="bg-background-blue rounded-lg shadow-md p-4">
             <h4 class="text-2xl font-semibold text-darkest-blue font-cinzel mb-4">Další videa</h4>
@@ -144,7 +144,7 @@ const { video, audio, text } = mediaData;
         </div>
       </div>
 
-      <!-- Mobile Next Button -->
+      Mobile Next Button
       <div class="lg:hidden mt-6 text-center">
         <button
           id="show-more-videos"
@@ -153,22 +153,22 @@ const { video, audio, text } = mediaData;
           Zobrazit více
         </button>
       </div>
-    </section>
+    </section> -->
 
     <!-- Audio Section -->
-    <section class="mb-16 bg-background-blue py-8 px-6 rounded-lg">
-      <div class="flex items-center justify-center mb-8">
-        <div class="w-12 h-0.5 bg-light-blue mr-3"></div>
-        <h2 class="text-3xl font-semibold text-darkest-blue font-cinzel">Podcasty a audio</h2>
-        <div class="w-12 h-0.5 bg-light-blue ml-3"></div>
+    <section class="mb-16 rounded-lg bg-background-blue px-6 py-8">
+      <div class="mb-8 flex items-center justify-center">
+        <div class="mr-3 h-0.5 w-12 bg-light-blue"></div>
+        <h2 class="font-cinzel text-3xl font-semibold text-darkest-blue">Podcasty a audio</h2>
+        <div class="ml-3 h-0.5 w-12 bg-light-blue"></div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 place-content-center size-fit mx-auto">
+      <div class="mx-auto grid size-fit grid-cols-1 place-content-center gap-6 md:grid-cols-2">
         {
           audio.map(item => (
-            <div class="bg-white rounded-lg shadow-md p-5 hover:shadow-lg transition-all duration-300 max-w-lg">
+            <div class="max-w-lg rounded-lg bg-white p-5 shadow-md transition-all duration-300 hover:shadow-lg">
               <div class="flex items-start space-x-4">
                 <div class="flex-shrink-0">
-                  <div class="w-12 h-12 bg-light-blue rounded-full flex items-center justify-center">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-light-blue">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-6 w-6 text-darkest-blue"
@@ -192,13 +192,13 @@ const { video, audio, text } = mediaData;
                   </div>
                 </div>
                 <div class="flex-1">
-                  <h3 class="text-xl font-semibold mb-2 text-darkest-blue">{item.title}</h3>
-                  <p class="text-dark-blue mb-3 text-sm">{item.description}</p>
-                  <div class="flex items-center text-sm text-dark-blue mb-3">
+                  <h3 class="mb-2 text-xl font-semibold text-darkest-blue">{item.title}</h3>
+                  <p class="mb-3 text-sm text-dark-blue">{item.description}</p>
+                  <div class="mb-3 flex items-center text-sm text-dark-blue">
                     <span class="mr-4 flex items-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4 mr-1"
+                        class="mr-1 h-4 w-4"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -215,7 +215,7 @@ const { video, audio, text } = mediaData;
                     <span class="flex items-center">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-4 w-4 mr-1"
+                        class="mr-1 h-4 w-4"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
